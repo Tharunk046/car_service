@@ -1,0 +1,42 @@
+.login-form{
+    height:30rem;
+    width: 35rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    padding: 16px;
+}
+.login-form label{
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: 450;
+    color: black;
+}
+.login-form input{
+    width: 100%;
+    font-size: 22px;
+    height: 1.5rem;
+    border: none;
+    outline: none;
+    border-bottom: 2px groove black;
+}
+.login-form .btn{
+    height: 3rem;
+    width: 15rem;
+    margin-top: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 22px;
+}
+.login-form h4{
+margin-top: 2rem;
+}
+.login-form a{
+    color: blue;
+    text-decoration: none;
+}
+.login-form h2{
+    font-weight: 500 !important;
+    color: black;
+}

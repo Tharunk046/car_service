@@ -1,0 +1,134 @@
+.carousel-inner img{
+    height: 500px !important;
+} 
+.carousel-caption {
+    position: absolute;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.carousel-caption p{
+    font-size: 60px;
+    text-transform: capitalize;
+    font-weight: 500;
+    color: white;
+}
+.about{
+    background-color: #F4F4F4;
+}
+.about h2{
+    padding-top: 1rem;
+}
+.about p{
+    font-size: 20px;
+    text-align: justify;
+    font-weight: 400;
+}
+.about-us img{
+    height: 20rem !important;
+}
+.why{
+    background-color: #F4F4F4;
+}
+.why h2{
+    padding-top: 1rem;
+}
+.why p{
+    font-size: 20px;
+    text-align: justify;
+    font-weight: 400;
+}
+.why-us img{
+    height: 20rem !important;
+}
+.about-us:hover h2{
+    text-underline-offset: 5px;
+    text-decoration: red underline;
+    transition: all 0.3s ease-in;
+}
+.why-us:hover h2{
+    text-underline-offset: 5px;
+    text-decoration: red underline;
+    transition: all 0.3s ease-in;
+}
+.landing-card{
+    height: fit-content;
+    background-color: #F4F4F4;
+    border-radius: 5px;
+}
+.landing-card .card{
+    background-color: #F4F4F4;
+    border:none; 
+   
+}
+.landing-card .card img{
+    margin-top: 3rem !important;
+    border-radius: 15px;
+    box-shadow: 5px 10px 10px gray;
+}
+.landing-card .card:hover img{
+    transform:scale(1.2);
+  /*  transform: translateY(-10px) !important; */
+    transition: all 0.5s ease;
+}
+.landing-card .card p{
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+.landing-card .card h3{
+    text-align:center;
+    font-weight: 600;
+    margin-top: 1.5rem;
+}
+.brand{
+    background-color: #F4F4F4;
+}
+.brand h1{
+    position: relative;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2rem;
+}
+.brand h1:before{
+    content: "";
+    text-align: center !important;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: red;
+    visibility: hidden;
+    transform: scaleX(0.5);
+    transition: all 0.3s ease-in-out;
+}
+.brand h1:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+.brand .card{
+      padding:12px;
+      margin-top: 2rem;
+      border: none;
+      background-color: #F4F4F4;
+  }
+.brand .card img {
+width: 60px;
+height: 60px;
+margin-left: auto;
+margin-right: auto;
+border-radius: 10px;
+}
+.brand .card h3{
+    margin-top: 1rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+.brand .card:hover img{
+    transform:scale(1.5);
+  /*  transform: translateY(-10px) !important; */
+    transition: all 0.5s ease;
+}
