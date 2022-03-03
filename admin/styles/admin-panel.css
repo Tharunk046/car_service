@@ -28,11 +28,13 @@ body {
   text-transform: capitalize;
   text-align: center;
   padding: 8px;
+  margin-top: -10px;
 }
 .card .card-title{
   font-size: 26px;
   font-weight: 600;
   text-align: center;
+  margin-top: 10px;
 }
 .card img{
   width: 100px;
