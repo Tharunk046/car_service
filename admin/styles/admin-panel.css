@@ -15,12 +15,12 @@ body {
 .card {
   box-sizing: border-box;
   float: left;
-  margin-left: 45px;
   width: 250px;
   height: 150px;
   border-radius: 20px !important;
-  border: 1px solid white;
   margin-left: 50px;
+  box-shadow: 3px 3px 3px gray;
+  margin-top: 10px;
 }
 .card p {
   font-size: 32px;
