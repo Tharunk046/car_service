@@ -17,7 +17,7 @@
     <?php include "../basic/admin-header.php" ?>
     <?php include "../basic/sidebar.php" ?>
     <div class="container-fluid">
-        <table class="table table-dark table-hover text-white text-center my-5">
+        <table class="table table-dark table-hover text-white text-center my-2">
             <thead>
                 <tr class="bg-dark text-white">
                     <th>id</th>
