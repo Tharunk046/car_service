@@ -12,32 +12,31 @@ body {
   text-align: center;
   color: white;
 }
-.box {
+.card {
   box-sizing: border-box;
   float: left;
   margin-left: 45px;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 150px;
   border-radius: 20px !important;
+  border: 1px solid white;
+  margin-left: 50px;
 }
-.box p {
-  color: white;
-  margin-top: 3rem;
+.card p {
   font-size: 32px;
   font-weight: 600;
   text-transform: capitalize;
   text-align: center;
   padding: 8px;
 }
-.user {
-  background: linear-gradient(to right, #4776e6, #8e54e9);
+.card .card-title{
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
 }
-.service {
-  background: linear-gradient(to right, #ff8008, #ffc837);
-}
-.booking {
-  background: linear-gradient(to right, #1d976c, #93f9b9);
-}
-.feedback {
-  background: linear-gradient(to right, #eb3349, #f45c43);
+.card img{
+  width: 100px;
+  height: 100px;
+  margin-top: 25px;
+  margin-left: 10px;
 }
