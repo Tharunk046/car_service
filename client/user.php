@@ -14,8 +14,9 @@ session_start();
     <form action="">
     <input type="date" name="" id="">
 </form>
-
+ 
 <img src="../images/user.png" alt="">
+<img src="" alt="">
 <img src="../images/add-event.png" alt="">
 <img src="../images/feedback.png" alt="">
 </body>
