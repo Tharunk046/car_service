@@ -44,7 +44,7 @@
              <td>$service_id</td>
              <td>$service_name</td>
              <td>$price</td>
-             <td> <a href='./crud/service_update.php?updateid=$service_id'><button type='submit' class='btn btn-warning'>Update</button></a>
+             <td> <a href='./crud/service_update.php?updateid=$service_id'><button type='submit' class='btn btn-info'>Update</button></a>
              <a href='./crud/service_delete.php?deleteid=$service_id'><button type='submit' class='btn btn-danger'>Delete</button></a>
              </td> 
            </tr>
