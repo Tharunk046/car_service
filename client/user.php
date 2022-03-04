@@ -1,6 +1,4 @@
-<?php  
-session_start();  
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +8,7 @@ session_start();
     <title>Document</title>
 </head>
 <body>
+<?php include "../basic/client-header.php" ?>
     <p>welcome  <?=$_SESSION['sess_user'];?> </p>
     <form action="">
     <input type="date" name="" id="">
