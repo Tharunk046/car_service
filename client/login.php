@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST' && isset($_POST['login'])) {
     {
         session_start();  
         $_SESSION['sess_user']=$username;  
-        header( "location: user.php");
+        header( "location: client-profile.php");
     }
     else{
         header("location: login.php");
