@@ -29,7 +29,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit']))){
     <!-- Bootstrap CSS v5.0.2 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   </head>
-  <body class="bg-dark container text-white my-4">
+  <body class="bg-dark text-white">
       <form action=" " method="POST">
       <p>Create new service : </p>
           <label for="service_name" class="form-label"> Service name : </label>
@@ -48,9 +48,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit']))){
   </body>
   <style>
       form{
-          margin-top: 5rem;
-          margin-left: auto !important;
-          margin-right: auto !important;
+          margin-top: 3rem;
+          margin-left: 12rem;
       }
       form p{
           font-size: 24px;
@@ -62,4 +61,5 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit']))){
           font-size: 18px;
       }
   </style>
+  <a href="/basic/admin-header.php"></a>
 </html>
