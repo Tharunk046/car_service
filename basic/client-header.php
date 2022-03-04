@@ -49,7 +49,7 @@ session_start();
   <body>
   <nav class="navbar navbar-expand-lg sticky-top container-fluid">
     <div class="navbar-brand">
-      <a href="../admin/client-panel.php"><i class="fas fa-tools"></i> <span>Auto</span> Logic</a>
+      <a href="#"><i class="fas fa-tools"></i> <span>Auto</span> Logic</a>
     </div>
     <div class="navbar-nav" style="margin-left: auto;">
     <li class="nav-item dropdown">
