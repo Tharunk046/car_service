@@ -58,7 +58,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit']))){
           <input type="text" name="price" id="price" class="form-control">
           <button class="btn btn-success my-4" name="submit"type="submit">Add service</button>
           <a href="../admin-service.php">
-          <button class="btn btn-danger" name="cancel"type="button">Cancel</button>
+          <button class="btn btn-danger ml-2" name="cancel"type="button">Cancel</button>
           </a>
       </form>
     <!-- Bootstrap JavaScript Libraries -->

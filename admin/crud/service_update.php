@@ -65,7 +65,7 @@ if (isset($_POST['submit'])) {
           <input type="text" name="price" id="price" class="form-control" value="<?php echo $price ?>">
           <button class="btn btn-success my-4" name="submit"type="submit">Update service</button>
           <a href="../admin-service.php">
-          <button class="btn btn-danger" name="cancel"type="button">Cancel</button>
+          <button class="btn btn-danger ml-2" name="cancel"type="button">Cancel</button>
           </a>
       </form>
   </body>
