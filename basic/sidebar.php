@@ -22,6 +22,7 @@
               <li><a href="../admin/admin-feedback.php">Feedbacks</a></li>
           </ul>
       </div>
+      
   </body>
   <style>
       .sidebar{
@@ -40,5 +41,6 @@
           color: white;
           text-transform: capitalize;
       }
+      
   </style>
 </html>

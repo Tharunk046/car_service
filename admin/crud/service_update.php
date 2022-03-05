@@ -36,8 +36,24 @@ if (isset($_POST['submit'])) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </head>
   <body class="bg-dark"> 
-  <div class=" form bg-dark container text-white my-4">
-      <form action=" " method="POST">
+  <nav class="navbar  navbar-expand-lg sticky-top container-fluid">
+    <div class="navbar-brand">
+      <a href="../admin/admin-panel.php"><i class="fas fa-tools"></i> <span>Auto</span> Logic</a>
+    </div>
+    <div class="navbar-nav" style="margin-left: auto;">
+      <a href="../admin-logout.php" style="margin-right:40px;">Logout</a>
+    </div>
+  </nav>
+  <div class="sidebar">
+          <ul>
+              <li><a href="../admin-panel.php">Dashboard</a></li>
+              <li><a href="../admin-user.php">users</a></li>
+              <li><a href="../admin-service.php">services</a></li>
+              <li><a href="../admin-booking.php">bookings</a></li>
+              <li><a href="../admin-feedback.php">Feedbacks</a></li>
+          </ul>
+    </div>
+    <form action=" " method="POST">
       <p>Update service : </p>
           <label for="service_name" class="form-label"> Service Name: </label>
           <input type="text" name="service_name" id="service_name" class="form-control" value="<?php echo $service_name ?>">
@@ -48,12 +64,41 @@ if (isset($_POST['submit'])) {
           <label for="price" class="form-label"> Price: </label>
           <input type="text" name="price" id="price" class="form-control" value="<?php echo $price ?>">
           <button class="btn btn-success my-4" name="submit"type="submit">Update service</button>
+          <a href="../admin-service.php">
+          <button class="btn btn-danger" name="cancel"type="button">Cancel</button>
+          </a>
       </form>
-  </div>
   </body>
   <style>
+      .navbar{
+    background-color: #1b1b1b !important;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 24px;
+}
+.sidebar{
+          position:fixed;
+          width: 10rem;
+          height: 100%;
+          background-color:#1f1f1f;
+      }
+      .sidebar li {
+          list-style-type: none;
+          margin-top: 2.5rem;
+          font-size: 22px;
+      }
+      .sidebar li a{
+          text-decoration: none;
+          color: white;
+          text-transform: capitalize;
+      }
       form{
-          margin-left: 8rem;
+          margin-left: 13rem;
+          margin-top:2rem;
+          color: white;
       }
       form p{
           font-size: 24px;
