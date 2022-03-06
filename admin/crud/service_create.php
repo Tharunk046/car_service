@@ -31,7 +31,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit']))){
   <body class="bg-dark">
   <nav class="navbar  navbar-expand-lg sticky-top container-fluid">
     <div class="navbar-brand">
-      <a href="../admin/admin-panel.php"><i class="fas fa-tools"></i> <span>Auto</span> Logic</a>
+      <a href="../admin-panel.php"><i class="fas fa-tools"></i> <span>Auto</span> Logic</a>
     </div>
     <div class="navbar-nav" style="margin-left: auto;">
       <a href="../admin-logout.php" style="margin-right:40px;">Logout</a>
