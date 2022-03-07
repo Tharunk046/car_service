@@ -15,17 +15,17 @@
   <body>
       <div class="sidebar">
           <ul>
-              <li><a href="../admin/admin-panel.php">Dashboard</a></li>
-              <li><a href="../admin/admin-user.php">users</a></li>
-              <li><a href="../admin/admin-service.php">services</a></li>
-              <li><a href="../admin/admin-booking.php">bookings</a></li>
-              <li><a href="../admin/admin-feedback.php">Feedbacks</a></li>
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Appointment</a></li>
+              <li><a href="#">Feedback</a></li>
           </ul>
       </div>
       
   </body>
   <style>
       .sidebar{
+          position:fixed;
           width: 10rem;
           height: 100%;
           background-color:#1f1f1f;
@@ -34,11 +34,13 @@
           list-style-type: none;
           margin-top: 2.5rem;
           font-size: 22px;
+          margin-left: -0.8rem;
       }
       .sidebar li a{
           text-decoration: none;
           color: white;
           text-transform: capitalize;
-      }    
+      }
+      
   </style>
 </html>
