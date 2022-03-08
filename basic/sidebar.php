@@ -27,7 +27,8 @@
   <style>
       .sidebar{
           width: 10rem;
-          height: 100%;
+          height: 100% !important;
+          position: fixed;
           background-color:#1f1f1f;
       }
       .sidebar li {

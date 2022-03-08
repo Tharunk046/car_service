@@ -55,14 +55,14 @@ session_start();
 .dropdown-menu{
   border: none !important;
   background:none !important;
-  text-align: center;
-  margin-left: -10px !important;
+  text-align: center !important;
+  margin-left: -5px !important;
 }
 .dropdown-menu .dropdown-item{
   border: none !important;
   background:none !important;
-  text-align: center;
-  margin-left: -10px !important;
+  text-align: center !important;
+  margin-left: -5px !important;
   font-size: 24px;
 }
 .dropdown-menu:hover{
