@@ -34,8 +34,34 @@ if (isset($_POST['submit'])) {
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-</head>
-  <body class="bg-light"> 
+  </head>
+  <body class="bg-light">
+  <nav class="navbar navbar-expand-lg sticky-top container-fluid">
+    <div class="navbar-brand">
+      <a href="../client/client-profile.php"><i class="fas fa-tools"></i> <span>Auto</span> Logic</a>
+    </div>
+    <div class="navbar-nav" style="margin-left: auto;">
+    <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle nav-user"id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown">
+          <?php session_start(); echo $_SESSION['sess_user']; ?>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="../client/client-logout.php">Logout</a></li>
+          </ul>
+    </li>
+    </div>
+  </nav>
+  <div class="sidebar">
+          <ul>
+            <?php echo "
+              <li><a href='../client-profile.php?profile=$username'>Profile</a></li>
+              <li><a href='#'>Services</a></li>
+              <li><a href='#'>Appointment</a></li>
+              <li><a href='#'>Feedback</a></li>
+              "
+              ?>
+          </ul>
+      </div>  
     <form action=" " method="POST">
       <p>Update profile : </p>
           <label for="username" class="form-label"> User name: </label>
@@ -54,4 +80,92 @@ if (isset($_POST['submit'])) {
           " ?>
       </form>
   </body>
+  <style>
+    .navbar{
+        background: #072F4F;
+}
+.navbar-brand{
+    margin-left: 20px;
+
+}.navbar a {
+  color:white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 28px;
+}
+.navbar-brand .fas,span{
+    color: #B2390E;
+}
+.navbar-brand a:hover{
+  color: white;
+}
+.navbar-nav{
+  margin-right: 40px;
+}
+.dropdown-menu{
+  border: none !important;
+  background:none !important;
+  text-align: center !important;
+  margin-left: -5px !important;
+}
+.dropdown-menu .dropdown-item{
+  border: none !important;
+  background:none !important;
+  text-align: center !important;
+  margin-left: -5px !important;
+  font-size: 24px;
+}
+.dropdown-menu:hover{
+  border: none !important;
+  background: none !important;
+  width:10px;
+  text-align: center;
+  margin-right: 40px;
+  border-bottom:2px solid red !important;
+  border-radius: 0;
+  height: fit-content;
+}
+.dropdown-menu a {
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+}
+.nav-user{
+  text-transform: capitalize;
+}
+.nav-user:hover{
+  color: white !important;
+}
+.sidebar{
+          position:fixed;
+          width: 10rem;
+          height: 100%;
+          background-color:#DCDCDC;
+      }
+      .sidebar li {
+          list-style-type: none;
+          margin-top: 2.5rem;
+          font-size: 22px;
+          margin-left: -0.8rem;
+      }
+      .sidebar li a{
+          text-decoration: none;
+          color: black;
+          text-transform: capitalize;
+      }
+      form{
+          margin-left: 13rem;
+          margin-top:2rem;
+          color: black;
+      }
+      form p{
+          font-size: 24px;
+      }
+      .form-control{
+          width: 25rem;
+      }
+      .form-label{
+          font-size: 18px;
+      }
+  </style>
 </html>

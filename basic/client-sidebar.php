@@ -15,20 +15,22 @@
   <body>
       <div class="sidebar">
           <ul>
-              <li><a href="#">Profile</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Appointment</a></li>
-              <li><a href="#">Feedback</a></li>
+              <?php echo "
+              <li><a href='../client/client-profile.php?profile=$username'>Profile</a></li>
+              <li><a href='#'>Services</a></li>
+              <li><a href='#'>Appointment</a></li>
+              <li><a href='#'>Feedback</a></li>
+              "
+              ?>
           </ul>
-      </div>
-      
+      </div>  
   </body>
   <style>
       .sidebar{
           position:fixed;
           width: 10rem;
           height: 100%;
-          background-color:#1f1f1f;
+          background-color:#DCDCDC;
       }
       .sidebar li {
           list-style-type: none;
@@ -38,9 +40,8 @@
       }
       .sidebar li a{
           text-decoration: none;
-          color: white;
+          color: black;
           text-transform: capitalize;
-      }
-      
+      }   
   </style>
 </html>

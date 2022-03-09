@@ -28,12 +28,13 @@
   <?php include "../basic/client-header.php" ?>
   <?php include "../basic/client-sidebar.php" ?>
   <div class="profile">
-    <div class="user-details my-3 ml-3 p-3">
+    <div class="user-details ml-3 p-3">
       <?php echo "
-      <h5>User id : $id</h5>
-      <h5>Username : $username</h5>
-      <h5>Phone number : $number</h5>
-      <h5>Email : $email</h5>
+      <h2>User Details</h2>
+      <p>User id : $id</p>
+      <p>Username : $username</p>
+      <p>Phone number : $number</p>
+      <p>Email : $email</p>
       <a href='./crud/profile_update.php?useredit=$id'>
       <button class='btn btn-success mt-3' type='submit'>Edit profile</button>
       </a>

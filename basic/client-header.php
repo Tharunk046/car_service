@@ -49,6 +49,9 @@ session_start();
 .navbar-brand .fas,span{
     color: #B2390E;
 }
+.navbar-brand a:hover{
+  color: white;
+}
 .navbar-nav{
   margin-right: 40px;
 }
