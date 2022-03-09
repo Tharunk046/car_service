@@ -1,3 +1,15 @@
+<?php
+    $connection = mysqli_connect('localhost', 'root', '', 'service_appointment') or die("connection failed") . mysqli_connect_error();
+    if(isset($_GET['profile'])){
+      $username = $_GET['profile'];
+      $sql = "SELECT * FROM `users` WHERE `username` = '$username'";
+      $query = mysqli_query($connection,$sql);
+      $profile = mysqli_fetch_assoc($query);
+      $id = $profile['id'];
+      $number = $profile['number'];
+      $email = $profile['email'];
+    }
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -16,6 +28,17 @@
   <?php include "../basic/client-header.php" ?>
   <?php include "../basic/client-sidebar.php" ?>
   <div class="profile">
+    <div class="user-details my-3 ml-3 p-3">
+      <?php echo "
+      <h5>User id : $id</h5>
+      <h5>Username : $username</h5>
+      <h5>Phone number : $number</h5>
+      <h5>Email : $email</h5>
+      <a href='./crud/profile_update.php?useredit=$id'>
+      <button class='btn btn-success mt-3' type='submit'>Edit profile</button>
+      </a>
+     "?>
+    </div>
   </div>
   </body>
 </html>
