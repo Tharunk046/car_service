@@ -45,7 +45,7 @@
                 <td>$number</td>
                 <td>$email</td>
                 <td>
-                <a href ='./crud/user_delete.php?deleteid=$id'><button class='btn btn-danger'>delete</button></a>
+                <button type='button' class='btn btn-danger' data-bs-toggle='modal' data-bs-target='#userdelete'>delete</button>
                 </td>
                 </tr>
              ";
@@ -55,6 +55,25 @@
             </tbody>
         </table>
     </div>
+<div class="modal fade" id="userdelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete User</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <h5>Do you want to delete this account?</h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <?php echo"
+        <a href ='./crud/user_delete.php?deleteid=$id'><button class='btn btn-danger'>delete</button></a>
+        "?>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 <style>
     table {

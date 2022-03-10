@@ -45,7 +45,7 @@
              <td>$service_name</td>
              <td>$price</td>
              <td> <a href='./crud/service_update.php?updateid=$service_id'><button type='submit' class='btn btn-info'>Update</button></a>
-             <a href='./crud/service_delete.php?deleteid=$service_id'><button type='submit' class='btn btn-danger'>Delete</button></a>
+             <button type='button' class='btn btn-danger' data-bs-toggle='modal' data-bs-target='#servicedelete'>delete</button>
              </td> 
            </tr>
              ";
@@ -55,6 +55,25 @@
        </tbody>
      </table>
    </div>
+   <div class="modal fade" id="servicedelete" tabindex="-1" aria-labelledby="servicedeletelabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="servicedeletelabel">Delete User</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <h5>Do you want to delete this service?</h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <?php echo"
+        <a href ='./crud/service_delete.php?deleteid=$service_id'><button class='btn btn-danger'>delete</button></a>
+        "?>
+      </div>
+    </div>
+  </div>
+</div>
  </body>
  <style>
    .service-list {

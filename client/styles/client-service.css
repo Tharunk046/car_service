@@ -1,0 +1,11 @@
+.service-list {
+ margin-left: 10rem;
+ width: 68rem !important;
+ padding: 16px;
+}
+thead{
+    font-size: 20px;
+}
+tbody{
+    font-size: 18px;
+}
