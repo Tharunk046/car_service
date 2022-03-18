@@ -55,7 +55,7 @@ if (isset($_POST['submit'])) {
           <ul>
             <?php echo "
               <li><a href='../client-profile.php?profile=$username'>Profile</a></li>
-              <li><a href='#'>Services</a></li>
+              <li><a href='../client-service.php?profile=$username'>Services</a></li>
               <li><a href='#'>Appointment</a></li>
               <li><a href='#'>Feedback</a></li>
               "

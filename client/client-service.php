@@ -6,8 +6,7 @@
       $query = mysqli_query($connection,$sql);
       $profile = mysqli_fetch_assoc($query);
       $id = $profile['id'];
-      $number = $profile['number'];
-      $email = $profile['email'];
+      
     }
 ?>
 <!doctype html>
@@ -29,9 +28,10 @@
    <?php include "../basic/client-header.php" ?>
    <?php include "../basic/client-sidebar.php" ?>
    <div class="service-list">
-       <a href="#">
-       <button class="btn btn-primary p-2 my-3 mx-3">Price calculator</button> 
-       </a>
+     <?php echo"
+       <a href='./price-calculator.php?profile=$username'>
+       <button class='btn btn-primary p-2 my-3 mx-3'>Price calculator</button> 
+       </a>  "?>
      <table class="table table-hover table-light text-center">
        <thead class="table-dark">
          <tr>
@@ -72,20 +72,15 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <h5 class="modal-title" id="staticBackdropLabel">PRICE CALCULATOR</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      <table class="table table-hover table-light text-center">
-       <thead class="table-dark">
-         <tr>
-           <th scope="col">Service id</th>
-           <th scope="col">Service name</th>
-           <th scope="col">Price</th>
-         </tr>
-       </thead>
-       <tbody>
-         <?php
+      <div class="calculator">
+        <div class="container row">
+          <div class="col-8">
+        <form action=" " class="form" method="post">
+        <?php
          $connection = mysqli_connect('localhost','root','','service_appointment') or die ("failed").mysqli_connect_error();
          $sql = "SELECT * FROM `service_list`";
          $result = mysqli_query($connection,$sql);
@@ -95,18 +90,24 @@
              $service_id = $row['service_id'];
              $service_name = $row['service_name'];
              $price = $row['price'];
-             echo "
-             <tr>
-             <td>$service_id</td>
-             <td>$service_name</td>
-             <td>$price</td>
-           </tr>
-             ";
+             echo"
+             <div class='form-check'>
+  <input class='form-check-input' type='checkbox' value='$price' id='$service_id'>
+  <label class='form-check-label' for='flexCheckIndeterminate'>
+    $service_name <span> $price </span>
+  </label>
+</div>
+             "; 
            }
-         }
-         ?>
-       </tbody>
-     </table>
+        }
+        ?>
+        </form>
+        </div>
+        <div class="col-4">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat in voluptas tenetur aspernatur illo odit obcaecati amet, nostrum itaque facilis possimus a modi, accusamus dolor sed asperiores quae expedita temporibus.</p>
+        </div>
+    </div> 
+      </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
