@@ -28,10 +28,9 @@
    <?php include "../basic/client-header.php" ?>
    <?php include "../basic/client-sidebar.php" ?>
    <div class="service-list">
-     <?php echo"
-       <a href='./price-calculator.php?profile=$username'>
-       <button class='btn btn-primary p-2 my-3 mx-3'>Price calculator</button> 
-       </a>  "?>
+       <button type="button" class="btn btn-primary my-3 p-2 mx-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+       Price calculator
+     </button>
      <table class="table table-hover table-light text-center">
        <thead class="table-dark">
          <tr>
@@ -64,9 +63,6 @@
        </tbody>
      </table>
    </div>
-   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Launch static backdrop modal
-</button>
 <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -104,7 +100,7 @@
         </form>
         </div>
         <div class="col-4">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat in voluptas tenetur aspernatur illo odit obcaecati amet, nostrum itaque facilis possimus a modi, accusamus dolor sed asperiores quae expedita temporibus.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  expedita temporibus.</p>
         </div>
     </div> 
       </div>
