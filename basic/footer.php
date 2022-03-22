@@ -42,7 +42,7 @@ integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jI
     </div>
     <hr>
     <div class="row col-sm-12 text-center container-fluid">
-      <h5>Privacy Policy | © 2021 Autalogic. All rights reserved</h5>
+      <h5>Privacy Policy | © 2021 Autologic. All rights reserved</h5>
     </div>
 </footer>
 <style>
