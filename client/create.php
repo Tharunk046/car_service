@@ -27,7 +27,7 @@
         <input type="text" class="form-control" name="address" id="address" placeholder="Enter your address" required>
         <label for="password" class="form-label">password:</label>
         <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password" maxlength="8" onchange='check_pass()'; required>
-        <span class="text-danger">maximum length - 8 characters</span>'
+        <span class="text-danger">maximum length - 8 characters</span>
         <br>
         <label for="confirm_password" class="form-label">confirm password:</label>
         <input type="password" class="form-control" name="confirm_password" id="confirm_password" maxlength="8" placeholder="Re-enter your password" onchange='check_pass()'; required>
