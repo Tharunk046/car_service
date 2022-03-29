@@ -8,6 +8,7 @@
       $id = $profile['id'];
       $number = $profile['number'];
       $email = $profile['email'];
+      $address = $profile['address'];
     }
 ?>
 <!doctype html>
@@ -35,6 +36,7 @@
       <p>Username : $username</p>
       <p>Phone number : $number</p>
       <p>Email : $email</p>
+      <p>Address : $address</p>
       <a href='./crud/profile_update.php?useredit=$id'>
       <button class='btn btn-success mt-3' type='submit' data-bs-toggle='modal' data-bs-target='#staticBackdrop'>Edit profile</button>
       </a>

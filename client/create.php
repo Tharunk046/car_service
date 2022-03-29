@@ -13,37 +13,39 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
   </head>
   <body>
+  <?php include "../basic/header.php"?>
     <div class="create-page">
     <h2>Create new account </h2>
     <form action="./create-validate.php" method="POST">
-        <label for="name">user name:</label>
+        <label for="name" class="form-label">user name:</label>
+        <input type="text" class="form-control" name="username" id="username" placeholder="Enter your name" required>
+        <label for="number" class="form-label">number:</label>
+        <input type="text" class="form-control" name="number" id="number" placeholder="Enter your number" required>
+        <label for="email" class="form-label">email:</label>
+        <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" required>
+        <label for="address" class="form-label">address:</label>
+        <input type="text" class="form-control" name="address" id="address" placeholder="Enter your address" required>
+        <label for="password" class="form-label">password:</label>
+        <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password" maxlength="8" onchange='check_pass()'; required>
+        <span class="text-danger">maximum length - 8 characters</span>'
         <br>
-        <input type="text" name="username" id="username" placeholder="enter your name" required>
-        <br>
-        <label for="number">number:</label>
-        <br>
-        <input type="text" name="number" id="number" placeholder="enter your number" required>
-        <br>
-        <label for="email">email:</label>
-        <br>
-        <input type="email" name="email" id="email" placeholder="enter your email" required>
-        <br>
-        <label for="password">password:</label>
-        <br>
-        <input type="password" name="password" id="password" placeholder="enter your password" maxlength="8" onchange='check_pass()'; required>
-        <span class="text-danger">maximum length - 8 characters</span>
-        <br>
-        <label for="confirm_password">confirm password:</label>
-        <br>
-        <input type="password" name="confirm_password" id="confirm_password" maxlength="8" placeholder="re-enter your password" onchange='check_pass()'; required>
+        <label for="confirm_password" class="form-label">confirm password:</label>
+        <input type="password" class="form-control" name="confirm_password" id="confirm_password" maxlength="8" placeholder="Re-enter your password" onchange='check_pass()'; required>
         <span class="text-danger">maximum length - 8 characters</span>
         <button type="submit" name="submit"class="btn btn-primary" id="submit" disabled>Submit</button>
     </form>
-    <p class="redirect">Already have an account?<a href="./login.php"> login </a></p>
     </div>
-    <br><br><br>
+    <br><br><br><br>
     <?php include "../basic/footer.php" ?>
 </body>
+<style>
+   .navbar{
+     position: absolute;
+   }
+   .create-page{
+     margin-top: 8rem;
+   }
+ </style>
 </html>
 <script>
     function check_pass() {

@@ -10,13 +10,15 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == 'POST' && isset($_POST['submit'])) {
     $connection = mysqli_connect('localhost', 'root', '', 'service_appointment') or die("connection failed") . mysqli_connect_error();
-    if (isset($_POST['username']) && isset($_POST['number']) && isset($_POST['email']) && isset($_POST['password'])) {
+    if (isset($_POST['username']) && isset($_POST['number']) && isset($_POST['email']) && isset($_POST['address']) && isset($_POST['password'])) {
         $username = $_POST['username'];
         $number = $_POST['number'];
         $email = $_POST['email'];
+        $address = $_POST['address'];
         $password = $_POST['password'];
+        
     }
-    $sql = "INSERT INTO `users`(`username`,`number`,`email`,`password`) VALUES ('$username','$number','$email','$password')";
+    $sql = "INSERT INTO `users`(`username`,`number`,`email`,`address`,`password`) VALUES ('$username','$number','$email','$address','$password')";
     $query = mysqli_query($connection, $sql);
     if ($query) {
         echo "<h2>your account has been successfully created</h2>";

@@ -7,12 +7,14 @@ $row = mysqli_fetch_assoc($result);
 $username = $row['username'];
 $number = $row['number'];
 $email = $row['email'];
+$address = $row['address'];
 
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $number = $_POST['number'];
     $email = $_POST['email'];
-    $sql = "UPDATE `users` SET `username` = '$username', `number`= '$number',`email`='$email' WHERE `id` = '$id'";
+    $address = $_POST['address'];
+    $sql = "UPDATE `users` SET `username` = '$username', `number`= '$number',`email`='$email',`address`='$address' WHERE `id` = '$id'";
     $result = mysqli_query($connection, $sql);
     if ($result) {
         header("location: ../client-profile.php?profile=$username");
@@ -72,6 +74,11 @@ if (isset($_POST['submit'])) {
           <br>
           <label for="email" class="form-label"> Email: </label>
           <input type="text" name="email" id="email" class="form-control" value="<?php echo $email ?>">
+          <br>
+          <label for="address" class="form-label">Address:</label>
+          <br>
+          <input type="text" name="address" class="form-control" id="address" value="<?php echo $address ?>">
+          <br>
           <button class="btn btn-success my-4" name="submit"type="submit">Update profile</button>
           <?php echo"
           <a href='../client-profile.php?profile=$username'>

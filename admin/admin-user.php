@@ -24,6 +24,7 @@
                     <th>username</th>
                     <th>number</th>
                     <th>email</th>
+                    <th>address</th>
                     <th>action</th>
                 </tr>
             </thead>
@@ -38,12 +39,14 @@
                         $username = $row['username'];
                         $number = $row['number'];
                         $email = $row['email'];
+                        $address = $row['address'];
                         echo "
                 <tr>
                 <td>$id</td>
                 <td>$username</td>
                 <td>$number</td>
                 <td>$email</td>
+                <td>$address</td>
                 <td>
                 <button type='button' class='btn btn-danger' data-bs-toggle='modal' data-bs-target='#userdelete'>delete</button>
                 </td>

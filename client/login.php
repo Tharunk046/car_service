@@ -13,6 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
   </head>
   <body>
+    <?php include "../basic/header.php"?>
       <div class="login-form">
       <h2 class="text-center">LOGIN</h2>
       <form action="login-validate.php" method="POST">
@@ -26,10 +27,17 @@
           <button type="submit" class="btn btn-primary" name="login" id="login">Login</button>
       </form>
       <h4 class="text-center">To create a new account <a href="./create.php">Click here</a></h4>
-      <h5 class="text-center">To go back to main page <a href="../landing/landing.php">Click here</a></h5>
       </div>
   </body>
  <?php include "../basic/footer.php"?>
+ <style>
+   .navbar{
+     position: absolute;
+   }
+   .login-form{
+     margin-top: 8rem;
+   }
+ </style>
  </html>
 
  
