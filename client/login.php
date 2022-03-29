@@ -28,14 +28,18 @@
       </form>
       <h4 class="text-center">To create a new account <a href="./create.php">Click here</a></h4>
       </div>
+      <?php include "../basic/footer.php"?>
   </body>
- <?php include "../basic/footer.php"?>
+
  <style>
    .navbar{
      position: absolute;
    }
    .login-form{
      margin-top: 8rem;
+   }
+   .footer{
+     margin-top: -3rem !important;
    }
  </style>
  </html>
