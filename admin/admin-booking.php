@@ -24,8 +24,10 @@
                     <th>number</th>
                     <th>address</th>
                     <th>date</th>
+                    <th>car manufacturer</th>
                     <th>car model</th>
                     <th>car registration number</th>
+                    <th>kilo meters driven</th>
                     <th>services</th>
                     <th>pick and drop</th>
                     <th>actions</th>
@@ -43,8 +45,10 @@
                         $number = $row['number'];
                         $address = $row['address'];
                         $date = $row['date'];
+                        $car_manufacturer = $row['car_manufacturer'];
                         $car_model = $row['car_model'];
                         $car_reg_num = $row['car_reg_num'];
+                        $kilo_met_driven = $row['kilo_met_driven'];
                         $services = $row['services'];
                         $pickup_drop = $row['pickup_drop'];
                         echo "
@@ -54,8 +58,10 @@
                 <td>$number</td>
                 <td>$address</td>
                 <td>$date</td>
+                <td>$car_manufacturer</td>
                 <td>$car_model</td>
                 <td>$car_reg_num</td>
+                <td>$kilo_met_driven</td>
                 <td>$services</td>
                 <td>$pickup_drop</td>
                 <td>
