@@ -25,13 +25,19 @@
   </body>
   <style>
       .navbar{
-    background-color: #1b1b1b !important;
+    background-color:  #072F4F !important;
 }
 .navbar a {
   color: white;
   text-decoration: none;
   margin-left: 20px;
   font-size: 24px;
+}
+.navbar-brand .fas,span{
+    color: #B2390E;
+}
+.navbar a:hover{
+  color: white;
 }
   </style>
 </html>

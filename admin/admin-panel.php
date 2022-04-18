@@ -56,7 +56,6 @@ if ($result4 = mysqli_query($connection, $sql4)) {
       </div>
     </div>
     </a>
-    /* */
     <a href="./admin-service.php" class="text-dark">
     <div class="card mb-3">
       <div class="row g-0">
@@ -72,7 +71,6 @@ if ($result4 = mysqli_query($connection, $sql4)) {
       </div>
     </div>
     </a>
-    /* */
     <a href="./admin-booking.php" class="text-dark">
     <div class="card mb-3">
       <div class="row g-0">
@@ -88,7 +86,6 @@ if ($result4 = mysqli_query($connection, $sql4)) {
       </div>
     </div>
     </a>
-    /* */
     <a href="./admin-feedback.php" class="text-dark">
     <div class="card mb-3">
       <div class="row g-0">
@@ -108,20 +105,3 @@ if ($result4 = mysqli_query($connection, $sql4)) {
 </body>
 </html>
 
-
-<p>
-        users : <br>
-        <?php echo $usercount; ?>
-    </p>
-    <p>
-       services : <br>
-       <?php echo $servicecount; ?>
-    </p>
-    <p>
-        Bookings : <br>
-        <?php echo $bookingcount; ?>
-    </p>
-     <p>
-        feedbacks : <br>
-        <?php echo $feedbackcount; ?>
-    </p>

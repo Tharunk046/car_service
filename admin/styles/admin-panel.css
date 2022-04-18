@@ -1,6 +1,4 @@
-body {
-    background-color:#232526 !important;
-}
+
 .dashboard {
   margin-left: 14rem;
 }
@@ -10,7 +8,6 @@ body {
   text-transform: capitalize;
   margin-top: 2rem;
   text-align: center;
-  color: white;
 }
 .card {
   box-sizing: border-box;

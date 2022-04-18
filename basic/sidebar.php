@@ -29,7 +29,7 @@
           width: 10rem;
           height: 100% !important;
           position: fixed;
-          background-color:#1f1f1f;
+          background-color:#DCDCDC;
       }
       .sidebar li {
           list-style-type: none;
@@ -38,7 +38,7 @@
       }
       .sidebar li a{
           text-decoration: none;
-          color: white;
+          color: black;
           text-transform: capitalize;
       }    
   </style>

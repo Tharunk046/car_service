@@ -13,13 +13,13 @@
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
  </head>
 
- <body class="bg-dark">
+ <body class="bg-light">
    <?php include "../basic/admin-header.php" ?>
    <?php include "../basic/sidebar.php" ?>
    <div class="service-list">
      <a href="./crud/service_create.php">
      <button class="btn btn-primary add my-4 mx-5">Add Service</button></a>
-     <table class="table table-hover table-dark text-center">
+     <table class="table table-hover table-light text-center">
        <thead>
          <tr>
            <th scope="col">Service id</th>

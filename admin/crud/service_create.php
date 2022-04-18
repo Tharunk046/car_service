@@ -25,12 +25,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit']))){
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </head>
-  <body class="bg-dark"> 
+  <body class="bg-light"> 
   <nav class="navbar  navbar-expand-lg sticky-top container-fluid">
     <div class="navbar-brand">
       <a href="../admin-panel.php"><i class="fas fa-tools"></i> <span>Auto</span> Logic</a>
@@ -66,7 +67,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit']))){
   </body>
   <style>
       .navbar{
-    background-color: #1b1b1b !important;
+    background-color:#072F4F !important;
 }
 .navbar a {
   color: white;
@@ -74,11 +75,17 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit']))){
   margin-left: 20px;
   font-size: 24px;
 }
+.navbar-brand .fas,span{
+    color: #B2390E;
+}
+.navbar a:hover{
+  color: white;
+}
 .sidebar{
           position:fixed;
           width: 10rem;
           height: 100%;
-          background-color:#1f1f1f;
+          background-color:#DCDCDC;
       }
       .sidebar li {
           list-style-type: none;
@@ -87,13 +94,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit']))){
       }
       .sidebar li a{
           text-decoration: none;
-          color: white;
+          color: black;
           text-transform: capitalize;
       }
       form{
           margin-left: 13rem;
           margin-top:2rem;
-          color: white;
+          color: black;
       }
       form p{
           font-size: 24px;

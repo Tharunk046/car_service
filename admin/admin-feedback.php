@@ -13,13 +13,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </head>
 
-<body class="bg-dark">
+<body class="bg-light">
     <?php include "../basic/admin-header.php" ?>
     <?php include "../basic/sidebar.php" ?>
     <div class="container-fluid">
-        <table class="table table-dark table-hover text-white text-center my-5">
+        <table class="table table-light table-hover text-center my-5">
             <thead>
-                <tr class="bg-dark text-white">
+                <tr class="bg-light">
                     <th>id</th>
                     <th>username</th>
                     <th>type</th>

@@ -12,24 +12,19 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </head>
-<body class="bg-dark">
+<body class="bg-light">
     <?php include "../basic/admin-header.php" ?>
     <?php include "../basic/sidebar.php" ?>
     <div class="container-fluid">
-        <table class="table table-dark table-hover text-white text-center my-2">
+        <table class="table table-light table-hover text-center my-4">
             <thead>
-                <tr class="bg-dark text-white">
-                    <th>id</th>
+                <tr class="bg-light">
+                    <th>booking id</th>
                     <th>username</th>
-                    <th>number</th>
-                    <th>address</th>
                     <th>date</th>
-                    <th>car manufacturer</th>
                     <th>car model</th>
-                    <th>car registration number</th>
-                    <th>kilo meters driven</th>
                     <th>services</th>
-                    <th>pick and drop</th>
+                    <th>status</th>
                     <th>actions</th>
                 </tr>
             </thead>
@@ -40,32 +35,30 @@
                 $result = mysqli_query($connection, $sql);
                 if ($result) {
                     while ($row = mysqli_fetch_assoc($result)) {
-                        $id = $row['id'];
+                        $booking_id = $row['booking_id'];
                         $username = $row['username'];
-                        $number = $row['number'];
-                        $address = $row['address'];
-                        $date = $row['date'];
-                        $car_manufacturer = $row['car_manufacturer'];
+                        $date = $row['date'];                  
                         $car_model = $row['car_model'];
-                        $car_reg_num = $row['car_reg_num'];
-                        $kilo_met_driven = $row['kilo_met_driven'];
                         $services = $row['services'];
-                        $pickup_drop = $row['pickup_drop'];
+                        $status = $row['status'];
                         echo "
                 <tr>
-                <td>$id</td>
+                <td>$booking_id</td>
                 <td>$username</td>
-                <td>$number</td>
-                <td>$address</td>
                 <td>$date</td>
-                <td>$car_manufacturer</td>
                 <td>$car_model</td>
-                <td>$car_reg_num</td>
-                <td>$kilo_met_driven</td>
                 <td>$services</td>
-                <td>$pickup_drop</td>
+                <td class='status'><p>$status</p></td>
                 <td>
-                <a href ='./crud/booking_delete.php?deleteid=$id'><button class='btn btn-danger'>delete</button></a>
+                <div class='dropdown'>
+  <button class='btn btn-primary dropdown-toggle' type='button' id='dropdownMenuButton2' data-bs-toggle='dropdown' aria-expanded='false'>
+  Action
+  </button>
+  <ul class='dropdown-menu' aria-labelledby='dropdownMenuButton2'>
+    <li><a class='dropdown-item' href='./booking_details.php?booking_id=$booking_id'>View</a></li>
+    <li><a class='dropdown-item' href='./crud/booking_delete.php?deleteid=$booking_id'>Delete</a></li>
+  </ul>
+</div>
                 </td>
                 </tr>
              ";
@@ -82,5 +75,20 @@
         width: 66rem !important;
         padding: 16px;
     }
+    ul .dropdown-menu{
+        margin-top: 10px !important;
+        width:40px !important;
+    }
+    .status{
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+    .status p{
+        width: fit-content;
+        border-bottom: 2px solid red;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    } 
 </style>
 </html>
