@@ -35,28 +35,33 @@ $status = $book['status'];
   <?php include "../basic/admin-header.php" ?>
   <?php include "../basic/sidebar.php" ?>
   <div class="booking-details">
-    <h4 class="text-center">Booking details</h4>
-    <div class="details row container mt-5">
+    <div class="booking_heading">
+    <h4>Booking details</h4>
+    </div>
+    <div class="details row container mt-3">
       <div class="col-6 set1">
-        <p>Booking id : <?php echo $booking_id;?></p>
-        <p>Username : <?php echo $username;?></p>
-        <p>Number : <?php echo $number;?></p>
-        <p>Address : <?php echo $address; ?></p>
-        <p>Date : <?php echo $date; ?></p>
+        <p><span>Booking id</span> <br> <?php echo $booking_id;?></p>
+        <p><span>Username</span><br><?php echo $username;?></p>
+        <p><span>Number</span><br><?php echo $number;?></p>
+        <p><span>Address</span><br><?php echo $address; ?></p>
+        <p><span>Date</span><br><?php echo $date; ?></p>
       </div>
       <div class="col-6 set2">
-        <p>Car manufacturer : <?php echo $car_manufacturer; ?></p>
-        <p>Car model : <?php echo $car_model; ?></p>
-        <p>Kilo meters driven : <?php echo $kilo_met_driven; ?></p>
-        <p>Services : <?php echo $services; ?></p>
-        <p>pickup and drop : <?php echo $pickup_drop; ?></p>
-        <p>Status : <?php echo $status; ?> </p>
+        <p><span>Car manufacturer</span><br><?php echo $car_manufacturer; ?></p>
+        <p><span>Car model</span><br><?php echo $car_model; ?></p>
+        <p><span>Kilo meters driven</span><br><?php echo $kilo_met_driven; ?></p>
+        <p><span>Services</span><br><?php echo $services; ?></p>
+        <p><span>pickup and drop</span><br><?php echo $pickup_drop; ?></p>
+        <p><span>Status</span><br><?php echo $status; ?> </p>
       </div>
     </div>
     <div class="action">
     <form>
   <input type = "button" class="btn btn-primary" value = "Print" onclick = "window.print()" />
   <button type="button" class="btn btn-success">####</button>
+  <a href="./admin-booking.php">
+    <button class="btn btn-warning ml-2" name="cancel"type="button">Cancel</button>
+  </a>
     </form>   
     </div>
   </div>
