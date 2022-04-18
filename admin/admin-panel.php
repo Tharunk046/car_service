@@ -32,14 +32,25 @@ if ($result4 = mysqli_query($connection, $sql4)) {
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
   <title>Document</title>
+  <style>
+    .dash_head {
+  width: 60rem;
+  height: 3rem;
+  border-bottom: 5px ridge grey;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+  </style>
 </head>
 
 <body>
   <?php include "../basic/admin-header.php" ?>
   <?php include "../basic/sidebar.php" ?>
   <div class="dashboard">
-    <p class="welcome"><?php echo "welcome " . $_SESSION['sess_user']; ?></p>
-    <p class="welcome">Dashboard</p>
+   <div class="dash_head mt-4">
+   <p>Dashboard</p>
+   </div>
     <br>
     <a href="./admin-user.php" class="text-dark">
     <div class="card mb-3">

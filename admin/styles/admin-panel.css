@@ -2,13 +2,6 @@
 .dashboard {
   margin-left: 14rem;
 }
-.dashboard .welcome {
-  font-size: 32px;
-  font-weight: 500;
-  text-transform: capitalize;
-  margin-top: 2rem;
-  text-align: center;
-}
 .card {
   box-sizing: border-box;
   float: left;
@@ -17,7 +10,7 @@
   border-radius: 20px !important;
   margin-left: 50px;
   box-shadow: 3px 3px 3px gray;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .card p {
   font-size: 32px;
