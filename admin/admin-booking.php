@@ -16,6 +16,9 @@
     <?php include "../basic/admin-header.php" ?>
     <?php include "../basic/sidebar.php" ?>
     <div class="container-fluid">
+    <div class="booking_heading">
+            <h4>Booking</h4>
+   </div>
         <table class="table table-light table-hover text-center my-4">
             <thead>
                 <tr class="bg-light">
@@ -90,5 +93,11 @@
         margin-left: auto;
         margin-right: auto;
     } 
+    .booking_heading{
+        margin-top: 1rem;
+        margin-left:11rem;
+        width: 66rem !important;
+        border-bottom: 5px solid gray;
+    }
 </style>
 </html>

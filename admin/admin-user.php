@@ -17,7 +17,10 @@
     <?php include "../basic/admin-header.php" ?>
     <?php include "../basic/sidebar.php" ?>
     <div class="container-fluid">
-        <table class="table table-light table-hover text-center my-5">
+        <div class="user_heading">
+            <h4>Users</h4>
+        </div>
+        <table class="table table-light table-hover text-center my-3">
             <thead>
                 <tr class="bg-light">
                     <th>id</th>
@@ -65,6 +68,12 @@
         margin-left: 10rem;
         width: 66rem !important;
         padding: 16px;
+    }
+    .user_heading{
+        margin-top: 1rem;
+        margin-left:10rem;
+        width: 66rem !important;
+        border-bottom: 5px solid gray;
     }
 </style>
 

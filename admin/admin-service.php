@@ -16,9 +16,12 @@
  <body class="bg-light">
    <?php include "../basic/admin-header.php" ?>
    <?php include "../basic/sidebar.php" ?>
+   <div class="service_heading">
+            <h4>Services</h4>
+   </div>
    <div class="service-list">
      <a href="./crud/service_create.php">
-     <button class="btn btn-primary add my-4 mx-5">Add Service</button></a>
+     <button class="btn btn-primary add my-2 mx-5">Add Service</button></a>
      <table class="table table-hover table-light text-center">
        <thead>
          <tr>
@@ -84,5 +87,11 @@
   .service-list .add {
     width: 8rem;
   }
+  .service_heading{
+        margin-top: 1rem;
+        margin-left:11rem;
+        width: 66rem !important;
+        border-bottom: 5px solid gray;
+    }
  </style>
  </html>
