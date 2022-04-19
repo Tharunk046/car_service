@@ -51,7 +51,7 @@
                 <td>$date</td>
                 <td>$car_model</td>
                 <td>$services</td>
-                <td class='status'><p>$status</p></td>
+                <td class='status badge badge-pill'><p>$status</p></td>
                 <td>
                 <div class='dropdown'>
   <button class='btn btn-primary dropdown-toggle' type='button' id='dropdownMenuButton2' data-bs-toggle='dropdown' aria-expanded='false'>
@@ -88,7 +88,6 @@
     }
     .status p{
         width: fit-content;
-        border-bottom: 2px solid red;
         text-align: center;
         margin-left: auto;
         margin-right: auto;
