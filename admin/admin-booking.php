@@ -51,7 +51,7 @@
                 <td>$date</td>
                 <td>$car_model</td>
                 <td>$services</td>
-                <td class='status badge badge-pill'><p>$status</p></td>
+                <td><span class='badge rounded-pill bg-success mt-2 p-2'>$status</span></td>
                 <td>
                 <div class='dropdown'>
   <button class='btn btn-primary dropdown-toggle' type='button' id='dropdownMenuButton2' data-bs-toggle='dropdown' aria-expanded='false'>
@@ -59,6 +59,7 @@
   </button>
   <ul class='dropdown-menu' aria-labelledby='dropdownMenuButton2'>
     <li><a class='dropdown-item' href='./booking_details.php?booking_id=$booking_id'>View</a></li>
+    <li><a class='dropdown-item' href='./update_status.php?update_status=$booking_id&status=$status'>Update status</a></li>
     <li><a class='dropdown-item' href='./crud/booking_delete.php?deleteid=$booking_id'>Delete</a></li>
   </ul>
 </div>
@@ -82,21 +83,12 @@
         margin-top: 10px !important;
         width:40px !important;
     }
-    .status{
-        font-weight: 700;
-        text-transform: capitalize;
-    }
-    .status p{
-        width: fit-content;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-    } 
     .booking_heading{
         margin-top: 1rem;
         margin-left:11rem;
         width: 66rem !important;
         border-bottom: 5px solid gray;
     }
+
 </style>
 </html>

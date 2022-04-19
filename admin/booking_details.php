@@ -55,17 +55,17 @@ $status = $book['status'];
         <p><span>Status</span><br><?php echo $status; ?> </p>
       </div>
     </div>
-    <div class="action">
+    <div class="action text-center mt-3">
     <form>
-  <input type = "button" class="btn btn-primary" value = "Print" onclick = "window.print()" />
-  <button type="button" class="btn btn-success">####</button>
-  <a href="./admin-booking.php">
-    <button class="btn btn-warning ml-2" name="cancel"type="button">Cancel</button>
+  <input type = "button" class="btn btn-danger" value = "Print" onclick = "window.print()" />
+  <a href="./admin-booking.php" class="text-white">
+    <button class="btn btn-warning ml-2 " name="cancel"type="button">Cancel</button>
   </a>
     </form>   
     </div>
   </div>
   <script>
   </script>
+  <br><br><br>
   </body>
 </html>
