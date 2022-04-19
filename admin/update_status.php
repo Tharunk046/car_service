@@ -48,7 +48,7 @@ if (isset($_POST['submit'])) {
     <div class="status">
         <p class="current">Current Status : <?php echo $_GET['status'] ?></p>
         <form action=" " method="post">
-            <label class="form-label" for="status">Update Status</label>
+            <label class="form-label" for="status">Update Status </label>
             <select class="form-select" name="status" aria-label="Default select example">
   <option selected>---status---</option>
   <option value="pending">pending</option>
