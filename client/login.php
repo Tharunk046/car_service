@@ -19,11 +19,11 @@
       <form action="login-validate.php" method="POST">
           <label for="username" class="form-label">Username:</label>
           <br>
-          <input type="text" name="username" id="username" class="form-input">
+          <input type="text" name="username" id="username" class="form-input" required autofocus>
           <br>
           <label for="password" class="form-label">Password:</label>
           <br>
-          <input type="password" name="password" id="password" class="form-input">
+          <input type="password" name="password" id="password" class="form-input" required>
           <button type="submit" class="btn btn-primary" name="login" id="login">Login</button>
       </form>
       <h4 class="text-center">To create a new account <a href="./create.php">Click here</a></h4>

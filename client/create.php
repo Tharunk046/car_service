@@ -18,7 +18,7 @@
     <h2>Create new account </h2>
     <form action="./create-validate.php" method="POST">
         <label for="name" class="form-label">user name:</label>
-        <input type="text" class="form-control" name="username" id="username" placeholder="Enter your name" required>
+        <input type="text" class="form-control" name="username" id="username" placeholder="Enter your name" required autofocus>
         <label for="number" class="form-label">number:</label>
         <input type="text" class="form-control" name="number" id="number" placeholder="Enter your number" required>
         <label for="email" class="form-label">email:</label>
