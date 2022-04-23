@@ -11,8 +11,6 @@
     color: black;
 }
 .create-page label{
-    margin-top: 15px;
-    margin-bottom: 5px;
     font-size: 22px;
     font-weight: 480;
     text-transform: capitalize;
@@ -41,9 +39,6 @@
     outline: none;
     border-radius: 8px;
 }
-span{
-    text-transform: capitalize;
-}
 .redirect{
     margin-top: 2rem;
     font-size: 22px;
@@ -51,5 +46,13 @@ span{
 }
 .redirect a{
     text-decoration: none;
+    font-weight: 500;
+}
+
+.input{
+    margin-top: -10px !important;
+}
+.error{
+    font-size: 16px;
     font-weight: 500;
 }

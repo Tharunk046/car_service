@@ -16,26 +16,42 @@
   <?php include "../basic/header.php"?>
     <div class="create-page">
     <h2>Create new account </h2>
+    <br>
     <form action="./create-validate.php" method="POST">
+      <div class="input">
         <label for="name" class="form-label">user name:</label>
-        <input type="text" class="form-control" name="username" id="username" placeholder="Enter your name" required autofocus>
+        <input type="text" class="form-control" name="username" id="username" placeholder="Enter your name">
+        <p id="usererror" class="error text-danger"></p>
+      </div>
+      <div class="input">
         <label for="number" class="form-label">number:</label>
-        <input type="text" class="form-control" name="number" id="number" placeholder="Enter your number" required>
+      <input type="text" class="form-control" name="number" maxlength="10" minlength="10" id="number" placeholder="Enter your number">
+        <p id="numerror"  class="error text-danger"></p>
+      </div>
+      <div class="input">
         <label for="email" class="form-label">email:</label>
-        <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" required>
+        <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email">
+        <p id="emailerror"  class="error text-danger"></p>
+      </div>
+      <div class="input">
         <label for="address" class="form-label">address:</label>
-        <input type="text" class="form-control" name="address" id="address" placeholder="Enter your address" required>
+        <input type="text" class="form-control" name="address" id="address" placeholder="Enter your address">
+        <p id="addresserror"  class="error text-danger"></p>
+      </div>
+      <div class="input">
         <label for="password" class="form-label">password:</label>
-        <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password" maxlength="8" onchange='check_pass()'; required>
-        <span class="text-danger">maximum length - 8 characters</span>
-        <br>
+        <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password" maxlength="8">
+        <p id="passerror"  class="error text-danger"></p>
+      </div>
+      <div class="input">
         <label for="confirm_password" class="form-label">confirm password:</label>
-        <input type="password" class="form-control" name="confirm_password" id="confirm_password" maxlength="8" placeholder="Re-enter your password" onchange='check_pass()'; required>
-        <span class="text-danger">maximum length - 8 characters</span>
-        <button type="submit" name="submit"class="btn btn-primary" id="submit" disabled>Submit</button>
+        <input type="password" class="form-control" name="confirm_password" id="confirm_password" maxlength="8" placeholder="Re-enter your password">
+        <p id="repasserror"  class="error text-danger"></p>
+      </div>
+        <button type="submit" name="submit"class="btn btn-primary" onclick="return val()" id="submit">Submit</button>
     </form>
     </div>
-    <br><br><br><br>
+    <br><br><br>
     <?php include "../basic/footer.php" ?>
 </body>
 <style>
@@ -45,15 +61,63 @@
    .create-page{
      margin-top: 8rem;
    }
+   .footer{
+     position: relative;
+     margin-top: 8rem !important;
+   }
  </style>
 </html>
 <script>
-    function check_pass() {
-    if (document.getElementById('password').value ==
-            document.getElementById('confirm_password').value) {
-        document.getElementById('submit').disabled = false;
-    } else {
-        document.getElementById('submit').disabled = true;
-    }
+function val(){
+var username = document.getElementById('username').value;
+var number = document.getElementById('number').value;
+var email = document.getElementById('email').value;
+var address = document.getElementById('address').value;
+var password = document.getElementById('password').value;
+var address = document.getElementById('address').value;
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+var password = document.getElementById('password').value;
+var confirm_password = document.getElementById('confirm_password').value;
+if(!username){
+    document.getElementById("usererror").innerHTML = "username is empty ! enter a username";
+    return false;    // in failure case
+} 
+else if(!number){
+  document.getElementById("numerror").innerHTML = "phone number is empty! enter a phone number";
+    return false;  
+}      /* 
+else if(number > 10 || number < 10){
+  document.getElementById("numerror").innerHTML = "invalid phone number! enter a correct phone number";
+    return false;  
+} */
+else if (!email){
+  document.getElementById("emailerror").innerHTML = " email is empty ! enter a correct email id";
+  return false;  
+}
+else if( ! email.match(mailformat)){
+  document.getElementById("emailerror").innerHTML = "invalid email id! enter a correct email id";
+  return false;  
+}
+else if( !address){
+  document.getElementById("addresserror").innerHTML = " address is empty ! enter a address";
+  return false;  
+}
+else if( !password){
+  document.getElementById("passerror").innerHTML = " password is empty ! enter a address";
+  return false;  
+}
+else if( !confirm_password){
+  document.getElementById("repasserror").innerHTML = " password is empty ! enter a address";
+  return false;  
+}
+else if( password != confirm_password  )
+{
+  document.getElementById("repasserror").innerHTML = " password does not match! enter a correct password";
+  return false;  
+}
+else{
+return true;   
+} // in success case
 }
 </script>
+
