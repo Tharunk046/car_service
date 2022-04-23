@@ -75,9 +75,9 @@ var email = document.getElementById('email').value;
 var address = document.getElementById('address').value;
 var password = document.getElementById('password').value;
 var address = document.getElementById('address').value;
-var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 var password = document.getElementById('password').value;
 var confirm_password = document.getElementById('confirm_password').value;
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 if(!username){
     document.getElementById("usererror").innerHTML = "username is empty ! enter a username";
     return false;    // in failure case
@@ -85,11 +85,7 @@ if(!username){
 else if(!number){
   document.getElementById("numerror").innerHTML = "phone number is empty! enter a phone number";
     return false;  
-}      /* 
-else if(number > 10 || number < 10){
-  document.getElementById("numerror").innerHTML = "invalid phone number! enter a correct phone number";
-    return false;  
-} */
+}     
 else if (!email){
   document.getElementById("emailerror").innerHTML = " email is empty ! enter a correct email id";
   return false;  
