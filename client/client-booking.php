@@ -23,7 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
   </head>
-  <body>
+  <body onload="getManufacture()">
   <?php include "../basic/client-header.php" ?>
   <?php include "../basic/client-sidebar.php" ?>
   <div class="booking">
@@ -42,17 +42,10 @@
           <input type="date" name="date" id="date" class="form-control">
           <br>
           <label for="car_manufacturer" name="car manufacturer" class="form-label">car manufacturer</label>
-          <select class="form-select" aria-label="Default select example">
-           <option selected>select the car manufacturer</option>
-           <option value="ford">Ford</option>
-           <option value="nissan">Nissan</option>
-           <option value="skoda">Skoda</option>
-           <option value="suzuki">Suzuki</option>
-           <option value="tata">Tata</option>
-           <option value="toyota">toyata</option>
-           <option value="volkswagen">Volkswagen</option>
-           <option value="honda">Honda</option>
-        </select>
+          <select name="manufacturer" onchange="changeModels(event)" class="form-select" id="man"></select>
+          <br>
+          <label for="car_model" name="car model" class="form-label">car model</label>
+          <select name="model" id="model" class="form-select"></select>
         <br>
         <!-- 
             !!!!!!car model
@@ -102,4 +95,32 @@
       </form>
   </div>
   </body>
+  <script>
+      const manufacturer = {
+    ford : ["Ford Figo","Ford Aspire","Ford EcoSport","Ford Mustang","Ford Endeavour"],
+    honda : ["Honda City","Honda Amaze","Honda Jazz","Honda WR-V","Honda Civic"],
+    nissan : ["Nissan Magnite","Nissan Kicks","Nissan GT-R"],
+    skoda : ["Skoda Slavia","Skoda Kushaq","Skoda Octavia","Skoda Kodiaq","Skoda Superb"],
+    tata : ["Tata Nexon","Tata Altroz","Tata Punch","Tata Tiago","Tata Harrier","Tata Safari"],
+    toyota : ["Toyota Glanza","Toyota Urban Cruiser","Toyota Fortuner","Toyota Belta","Toyota Innova Crysta"],
+    volkswagen : ["Volkswagen Polo","Volkswagen Vento","Volkswagen Taigun","Volkswagen Virtus"],
+    maruti_suzuki :["Maruti Suzuki Ertiga","Maruti Suzuki Swift","Maruti Suzuki Baleno","Maruti Suzuki Wagon R","Maruti Suzuki Dzire","Maruti Suzuki Celerio","Maruti Suzuki S-Cross"],
+    
+}
+function changeModels(e){
+    document.getElementById('model').innerHTML = ''
+    manufacturer[event.target.value].forEach(element =>{
+        document.getElementById('model').innerHTML += `<option value=${element}>${element}</option>`
+    });
+}
+function getManufacture(){
+    Object.keys(manufacturer).forEach(element => {
+        document.getElementById('man').innerHTML += `<option value = ${element}>${element}</option>`
+    });
+    manufacturer["ford"].forEach(element => {
+        document.getElementById('model').innerHTML += `<option value = ${element}>${element}</option>`
+    });
+}
+  </script>
+
 </html>
