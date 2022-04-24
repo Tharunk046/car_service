@@ -41,15 +41,12 @@
           <label for="date" class="form-label">date:</label>
           <input type="date" name="date" id="date" class="form-control">
           <br>
-          <label for="car_manufacturer" name="car manufacturer" class="form-label">car manufacturer</label>
+          <label for="car_manufacturer" name="car manufacturer" class="form-label">car manufacturer:</label>
           <select name="manufacturer" onchange="changeModels(event)" class="form-select" id="man"></select>
           <br>
-          <label for="car_model" name="car model" class="form-label">car model</label>
+          <label for="car_model" name="car model" class="form-label">car model:</label>
           <select name="model" id="model" class="form-select"></select>
         <br>
-        <!-- 
-            !!!!!!car model
--->
         <label for="car reg num" class="form-label">Car registration number</label>
         <input type="text" name="car_reg_num" id="car_reg_num" class="form-control">
         <br>
