@@ -31,10 +31,10 @@ $status = $book['status'];
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
   </head>
-  <body class="bg-light">
+  <body class="bg-light" id="body">
   <?php include "../basic/admin-header.php" ?>
   <?php include "../basic/sidebar.php" ?>
-  <div class="booking-details">
+  <div class="booking-details" id="booking_details">
     <div class="booking_heading">
     <h4>Booking details</h4>
     </div>
@@ -55,16 +55,24 @@ $status = $book['status'];
         <p><span>Status</span><br><?php echo $status; ?> </p>
       </div>
     </div>
+  </div>
     <div class="action text-center mt-3">
     <form>
-  <input type = "button" class="btn btn-danger" value = "Print" onclick = "window.print()" />
+  <input type = "button" class="btn btn-danger" value = "Print"  onclick="printDiv('booking_details')"  />
   <a href="./admin-booking.php" class="text-white">
     <button class="btn btn-warning ml-2 " name="cancel"type="button">Cancel</button>
   </a>
     </form>   
     </div>
-  </div>
   <script>
+    function printDiv(booking_details) {
+     var printContents = document.getElementById(booking_details).innerHTML;
+     var originalContents = document.body.innerHTML;
+
+     document.body.innerHTML = printContents;
+
+     window.print();
+}
   </script>
   <br><br><br>
   </body>
