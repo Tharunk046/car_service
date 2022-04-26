@@ -1,6 +1,5 @@
 <!doctype html>
  <html lang="en">
-
  <head>
    <title>Title</title>
    <!-- Required meta tags -->
@@ -11,8 +10,12 @@
    <!-- Bootstrap JavaScript Libraries -->
    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+   <script language="JavaScript" type="text/javascript">
+   function checkDelete(){
+    return confirm('Are you sure you want to delete?');
+}
+</script>
  </head>
-
  <body class="bg-light">
    <?php include "../basic/admin-header.php" ?>
    <?php include "../basic/sidebar.php" ?>
@@ -48,7 +51,7 @@
              <td>$service_name</td>
              <td>$price</td>
              <td> <a href='./crud/service_update.php?updateid=$service_id'><button type='submit' class='btn btn-info'>Update</button></a>
-             <button type='button' class='btn btn-danger' data-bs-toggle='modal' data-bs-target='#servicedelete'>delete</button>
+             <a onclick='return checkDelete()' href ='./crud/service_delete.php?deleteid=$service_id'><button class='btn btn-danger'>delete</button></a>
              </td> 
            </tr>
              ";
@@ -58,25 +61,6 @@
        </tbody>
      </table>
    </div>
-   <div class="modal fade" id="servicedelete" tabindex="-1" aria-labelledby="servicedeletelabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="servicedeletelabel">Delete User</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-          <h5>Do you want to delete this service?</h5>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <?php echo"
-        <a href ='./crud/service_delete.php?deleteid=$service_id'><button class='btn btn-danger'>delete</button></a>
-        "?>
-      </div>
-    </div>
-  </div>
-</div>
  </body>
  <style>
    .service-list {

@@ -11,6 +11,11 @@
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script language="JavaScript" type="text/javascript">
+    function checkDelete(){
+    return confirm('Are you sure you want to delete?');
+}
+</script>
 </head>
 <body class="bg-light">
     <?php include "../basic/admin-header.php" ?>
@@ -60,7 +65,7 @@
   <ul class='dropdown-menu' aria-labelledby='dropdownMenuButton2'>
     <li><a class='dropdown-item' href='./booking_details.php?booking_id=$booking_id'>View</a></li>
     <li><a class='dropdown-item' href='./update_status.php?update_status=$booking_id&status=$status'>Update status</a></li>
-    <li><a class='dropdown-item' href='./crud/booking_delete.php?deleteid=$booking_id'>Delete</a></li>
+    <li><a class='dropdown-item' onclick='return checkDelete()' href='./crud/booking_delete.php?deleteid=$booking_id'>Delete</a></li>
   </ul>
 </div>
                 </td>

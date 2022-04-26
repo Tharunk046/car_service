@@ -19,7 +19,6 @@ if (isset($_POST['submit'])) {
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS v5.0.2 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
@@ -50,12 +49,12 @@ if (isset($_POST['submit'])) {
         <form action=" " method="post">
             <label class="form-label" for="status">Update Status </label>
             <select class="form-select" name="status" aria-label="Default select example">
-  <option selected>---status---</option>
-  <option value="pending">pending</option>
+  <option selected disabled>---status---</option>
+  <option value="pending" >pending</option>
   <option value="on progress">on progess</option>
   <option value="completed">completed</option>
             </select>
-        <button class="btn btn-success my-4" name="submit"type="submit">Update status</button>
+        <button class="btn btn-success my-4"  onclick="checkUpdate()"  name="submit"type="submit">Update status</button>
           <a href="./admin-booking.php">
         <button class="btn btn-danger ml-2" name="cancel"type="button">Cancel</button>
           </a>
