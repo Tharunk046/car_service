@@ -9,6 +9,28 @@
       $address = $profile['address'];
     }
 ?>
+<?php
+if($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit']))){
+    $connection = mysqli_connect('localhost','root','','service_appointment') or die ("failed").mysqli_connect_error();
+        $username = $_POST['username'];
+        $number = $_POST['number'];
+        $address = $_POST['address'];
+        $date = $_POST['date'];
+        $car_manufacturer = $_POST['car_manufacturer'];
+        $car_model = $_POST['car_model'];
+        $car_reg_num = $_POST['car_reg_num'];
+        $kilo_met_driven = $_POST['kilo_met_driven'];
+        $services = implode(',', $_POST['services']);
+        $pickup_drop = $_POST['pickup_drop'];
+    $sql = "INSERT INTO `booking`(`username`,`number`,`address`,`date`,`car_manufacturer`, `car_model`, `car_reg_num`, `kilo_met_driven`, `services`, `pickup_drop`) VALUES ('$username','$number','$address','$date','$car_manufacturer','$car_model','$car_reg_num','$kilo_met_driven','$services','$pickup_drop')";
+    $result = mysqli_query($connection,$sql);
+    if ($result) {
+        header("location: ./redirect.php");
+    } else {
+        echo "failed";
+    }
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -28,7 +50,7 @@
   <?php include "../basic/client-sidebar.php" ?>
   <div class="booking">
       <p class=" heading mx-3 mt-3">Service Apointment booking</p>
-      <form action="" method="POST" class="form">
+      <form action=" " method="POST" class="form">
           <label for="username" class="form-label"> User name: </label>
           <input type="text" name="username" id="username" class="form-control" value="<?php echo $username ?>">
           <br>
@@ -41,11 +63,11 @@
           <label for="date" class="form-label">date:</label>
           <input type="date" name="date" id="date" class="form-control">
           <br>
-          <label for="car_manufacturer" name="car manufacturer" class="form-label">car manufacturer:</label>
-          <select name="manufacturer" onchange="changeModels(event)" class="form-select" id="man"></select>
+          <label for="car_manufacturer" name="car_manufacturer" class="form-label">car manufacturer:</label>
+          <select name="car_manufacturer" onchange="changeModels(event)" class="form-select" id="man"></select>
           <br>
-          <label for="car_model" name="car model" class="form-label">car model:</label>
-          <select name="model" id="model" class="form-select"></select>
+          <label for="car_model" name="car_model" class="form-label">car model:</label>
+          <select name="car_model" id="model" class="form-select"></select>
         <br>
         <label for="car reg num" class="form-label">Car registration number</label>
         <input type="text" name="car_reg_num" id="car_reg_num" class="form-control">
@@ -66,7 +88,7 @@
              $price = $row['price'];
              echo"
              <div class='form-check'>
-  <input class='form-check-input' type='checkbox' value='$service_id' id='$service_id'>
+  <input class='form-check-input' name='services[]' type='checkbox' value='$service_id' id='$service_id'>
   <label class='form-check-label' for='flexCheckIndeterminate'>
     $service_name
   </label>
@@ -76,32 +98,32 @@
         }
         ?>
         <br>
-        <label for="pickupdrop" class="form-label">Pick up & drop</label>
+        <label for="pickup_drop" class="form-label">Pick up & drop</label>
         <br>
-        <input class="form-check-input" type="radio" name="pickupdrop" id="autologic">
+        <input class="form-check-input" type="radio" value="Autologic service center" name="pickup_drop" id="autologic">
         <label class="form-check-label" for="autologic">
         Auto logic service center
         </label>
         <br>
-        <input class="form-check-input" type="radio" name="pickupdrop" id="self">
+        <input class="form-check-input" type="radio" value="Self" name="pickup_drop" id="self">
         <label class="form-check-label" for="self">
         Self
        </label>
        <br>
-       <button type="submit" class="btn btn-primary my-3">Submit</button>
+       <button type="submit" name ="submit" id="submit" class="btn btn-primary my-3">Submit</button>
       </form>
   </div>
   </body>
   <script>
       const manufacturer = {
-    ford : ["Ford Figo","Ford Aspire","Ford EcoSport","Ford Mustang","Ford Endeavour"],
-    honda : ["Honda City","Honda Amaze","Honda Jazz","Honda WR-V","Honda Civic"],
-    nissan : ["Nissan Magnite","Nissan Kicks","Nissan GT-R"],
-    skoda : ["Skoda Slavia","Skoda Kushaq","Skoda Octavia","Skoda Kodiaq","Skoda Superb"],
-    tata : ["Tata Nexon","Tata Altroz","Tata Punch","Tata Tiago","Tata Harrier","Tata Safari"],
-    toyota : ["Toyota Glanza","Toyota Urban Cruiser","Toyota Fortuner","Toyota Belta","Toyota Innova Crysta"],
-    volkswagen : ["Volkswagen Polo","Volkswagen Vento","Volkswagen Taigun","Volkswagen Virtus"],
-    maruti_suzuki :["Maruti Suzuki Ertiga","Maruti Suzuki Swift","Maruti Suzuki Baleno","Maruti Suzuki Wagon R","Maruti Suzuki Dzire","Maruti Suzuki Celerio","Maruti Suzuki S-Cross"],
+    ford : ["Ford_Figo","Ford_Aspire","Ford_EcoSport","Ford_Mustang","Ford_Endeavour"],
+   honda : ["Honda_City","Honda_Amaze","Honda_Jazz","Honda_WR-V","Honda_Civic"],
+    nissan : ["Nissan_Magnite","Nissan_Kicks","Nissan_GT-R"],
+    skoda : ["Skoda_Slavia","Skoda_Kushaq","Skoda_Octavia","Skoda_Kodiaq","Skoda_Superb"],
+    tata : ["Tata_Nexon","Tata_Altroz","Tata_Punch","Tata_Tiago","Tata_Harrier","Tata_Safari"],
+    toyota : ["Toyota_Glanza","Toyota_Urban_Cruiser","Toyota_Fortuner","Toyota_Belta","Toyota_Innova Crysta"],
+    volkswagen : ["VolkswagenPolo","VolkswagenVento","VolkswagenTaigun","VolkswagenVirtus"],
+    maruti :["Maruti_Ertiga","Maruti_Swift","Maruti_Baleno","Maruti_Wagon_R","Maruti_Dzire","Maruti_Celerio","Maruti_S-Cross"],
     
 }
 function changeModels(e){
@@ -112,7 +134,7 @@ function changeModels(e){
 }
 function getManufacture(){
     Object.keys(manufacturer).forEach(element => {
-        document.getElementById('man').innerHTML += `<option value = ${element}>${element}</option>`
+        document.getElementById('man').innerHTML += `<option value  = ${element}>${element}</option>`
     });
     manufacturer["ford"].forEach(element => {
         document.getElementById('model').innerHTML += `<option value = ${element}>${element}</option>`
