@@ -44,6 +44,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit']))){
   <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script language="JavaScript" type="text/javascript">
+     function checkBooking(){
+    return confirm('please confirm to book the appointment?');
+    }
+    </script>
   </head>
   <body onload="getManufacture()">
   <?php include "../basic/client-header.php" ?>
@@ -110,7 +115,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit']))){
         Self
        </label>
        <br>
-       <button type="submit" name ="submit" id="submit" class="btn btn-primary my-3">Submit</button>
+       <button type="submit" name ="submit" id="submit" onclick="checkBooking()" class="btn btn-primary my-3">Submit</button>
       </form>
   </div>
   </body>

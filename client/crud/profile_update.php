@@ -36,6 +36,11 @@ if (isset($_POST['submit'])) {
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script language="JavaScript" type="text/javascript">
+     function checkUpdate(){
+    return confirm('Are you sure you want to update this profile?');
+    }
+    </script>
   </head>
   <body class="bg-light">
   <nav class="navbar navbar-expand-lg sticky-top container-fluid">
@@ -58,8 +63,8 @@ if (isset($_POST['submit'])) {
             <?php echo "
               <li><a href='../client-profile.php?profile=$username'>Profile</a></li>
               <li><a href='../client-service.php?profile=$username'>Services</a></li>
-              <li><a href='#'>Appointment</a></li>
-              <li><a href='#'>Feedback</a></li>
+              <li><a href='../client-booking.php?profile=$username'>Appointment</a></li>
+              <li><a href='href='../client-feedback.php?profile=$username''>Feedback</a></li>
               "
               ?>
           </ul>
@@ -79,7 +84,7 @@ if (isset($_POST['submit'])) {
           <br>
           <input type="text" name="address" class="form-control" id="address" value="<?php echo $address ?>">
           <br>
-          <button class="btn btn-success my-4" name="submit"type="submit">Update profile</button>
+          <button class="btn btn-success my-4" onclick="checkUpdate()" name="submit"type="submit">Update profile</button>
           <?php echo"
           <a href='../client-profile.php?profile=$username'>
           <button class='btn btn-danger ml-2' name='cancel'type='button'>Cancel</button>

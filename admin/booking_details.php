@@ -72,6 +72,7 @@ $status = $book['status'];
      document.body.innerHTML = printContents;
 
      window.print();
+
 }
   </script>
   <br><br><br>
