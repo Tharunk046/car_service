@@ -9,6 +9,11 @@
     <!-- Bootstrap CSS v5.0.2 -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script language="JavaScript" type="text/javascript">
+   function adminLogout(){
+    return confirm('Are you sure you want to logout?');
+    }
+</script>
   </head>
   <body>
   <nav class="navbar  navbar-expand-lg sticky-top container-fluid">
@@ -16,7 +21,7 @@
       <a href="../admin/admin-panel.php"><i class="fas fa-tools"></i> <span>Auto</span> Logic</a>
     </div>
     <div class="navbar-nav" style="margin-left: auto;">
-      <a href="../admin/admin-logout.php" style="margin-right:40px;">Logout</a>
+      <a href="../admin/admin-logout.php" onclick="adminLogout()" style="margin-right:40px;">Logout</a>
     </div>
   </nav>
     <!-- Bootstrap JavaScript Libraries -->
@@ -40,4 +45,5 @@
   color: white;
 }
   </style>
+  
 </html>

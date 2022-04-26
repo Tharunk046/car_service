@@ -11,7 +11,11 @@ session_start();
     <!-- Bootstrap CSS v5.0.2 -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+    <script language="JavaScript" type="text/javascript">
+   function userLogout(){
+    return confirm('Are you sure you want to logout?');
+    }
+</script>
   </head>
   <body>
   <nav class="navbar navbar-expand-lg sticky-top container-fluid">
@@ -26,7 +30,7 @@ session_start();
           <?php echo $_SESSION['sess_user']; ?>
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="../client/client-logout.php">Logout</a></li>
+            <li><a class="dropdown-item" onclick="userLogout()" href="../client/client-logout.php">Logout</a></li>
           </ul>
     </li>
     </div>
