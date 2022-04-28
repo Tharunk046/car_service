@@ -58,6 +58,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit']))){
       <form action=" " method="POST" class="form">
           <label for="username" class="form-label"> User name: </label>
           <input type="text" name="username" id="username" class="form-control" value="<?php echo $username ?>">
+          <p id="usererror" class="error text-danger"></p>
           <br>
           <label for="number" class="form-label"> Phone number: </label>
           <input type="text" name="number" id="number" class="form-control" value="<?php echo $number ?>">
