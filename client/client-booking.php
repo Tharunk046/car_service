@@ -116,7 +116,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit']))){
         Self
        </label>
        <br>
-       <button type="submit" name ="submit" id="submit" onclick="checkBooking()" class="btn btn-primary my-3">Submit</button>
+       <button type="submi" name ="submit" id="submit" onclick="checkBooking()" class="btn btn-primary my-3">Submit</button>
       </form>
   </div>
   </body>
