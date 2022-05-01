@@ -1,18 +1,4 @@
-.carousel-inner img{
-    height: 500px !important;
-} 
-.carousel-caption {
-    position: absolute;
-    margin-top: 2rem;
-    margin-left: auto;
-    margin-right: auto;
-}
-.carousel-caption p{
-    font-size: 60px;
-    text-transform: capitalize;
-    font-weight: 500;
-    color: white;
-}
+
 .about{
     background-color: #F4F4F4;
 }

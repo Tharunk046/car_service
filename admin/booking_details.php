@@ -40,19 +40,19 @@ $status = $book['status'];
     </div>
     <div class="details row container mt-3">
       <div class="col-6 set1">
-        <p><span>Booking id</span> <br> <?php echo $booking_id;?></p>
-        <p><span>Username</span><br><?php echo $username;?></p>
-        <p><span>Number</span><br><?php echo $number;?></p>
-        <p><span>Address</span><br><?php echo $address; ?></p>
-        <p><span>Date</span><br><?php echo $date; ?></p>
+        <p><span class="book">Booking id</span> <br> <?php echo $booking_id;?></p>
+        <p><span class="book">Username</span><br><?php echo $username;?></p>
+        <p><span class="book">Number</span><br><?php echo $number;?></p>
+        <p><span class="book">Address</span><br><?php echo $address; ?></p>
+        <p><span class="book">Date</span><br><?php echo $date; ?></p>
       </div>
       <div class="col-6 set2">
-        <p><span>Car manufacturer</span><br><?php echo $car_manufacturer; ?></p>
-        <p><span>Car model</span><br><?php echo $car_model; ?></p>
-        <p><span>Kilo meters driven</span><br><?php echo $kilo_met_driven; ?></p>
-        <p><span>Services</span><br><?php echo $services; ?></p>
-        <p><span>pickup and drop</span><br><?php echo $pickup_drop; ?></p>
-        <p><span>Status</span><br><?php echo $status; ?> </p>
+        <p><span class="book">Car manufacturer</span><br><?php echo $car_manufacturer; ?></p>
+        <p><span class="book">Car model</span><br><?php echo $car_model; ?></p>
+        <p><span class="book">Kilo meters driven</span><br><?php echo $kilo_met_driven; ?></p>
+        <p><span class="book">Services</span><br><?php echo $services; ?></p>
+        <p><span class="book">pickup and drop</span><br><?php echo $pickup_drop; ?></p>
+        <p><span class="book">Status</span><br><?php echo $status; ?> </p>
       </div>
     </div>
   </div>

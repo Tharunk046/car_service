@@ -2,6 +2,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <!--font-awesome icon cdn-->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni&family=Roboto:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
     integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   <!-- Optional JavaScript -->
@@ -9,7 +10,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 <nav class="navbar navbar-expand-lg sticky-top container-fluid">
     <div class="navbar-brand">
-      <a href="#"><i class="fas fa-tools"></i> <span>Auto</span> Logic</a>
+      <a href="#"><i class="fas fa-tools"></i> Auto<span>logic</span></a>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-toggler"
       aria-controls="nav-toggler" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +32,6 @@
       .navbar{
     height:fit-content;
     background: #072F4F; 
-    font-family: Arial, Helvetica, sans-serif;
 }
 .navbar-brand{
     margin-left: 20px;
@@ -41,13 +41,14 @@
     font-size: 35px !important;
     text-decoration: none;
     font-weight: 500 !important;
+    font-family: 'Libre Bodoni', serif;
 }
 .navbar-brand a:hover{
     color: white;
     text-decoration: none;
 }
-.navbar-brand .fas,span{
-    color: #B2390E;
+span{
+    color: #B4CE1D;
 }
 .navbar-toggler {
     background-color: white !important;
@@ -62,6 +63,7 @@
 }
 .navbar-nav a{
   margin-right: 20px;
+  font-weight: 500;
 }
 .navbar-nav a:hover{
     text-decoration: white underline;

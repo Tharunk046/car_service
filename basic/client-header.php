@@ -12,16 +12,13 @@ session_start();
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script language="JavaScript" type="text/javascript">
-   function userLogout(){
-    return confirm('Are you sure you want to logout?');
-    }
 </script>
   </head>
   <body>
   <nav class="navbar navbar-expand-lg sticky-top container-fluid">
     <div class="navbar-brand">
       <?php echo"
-      <a href='../client/client-profile.php?profile=$username'><i class='fas fa-tools'></i> <span>Auto</span> Logic</a>
+      <a href='../client/client-profile.php?profile=$username'><i class='fas fa-tools'></i> Auto<span>logic</span></a>
       ";?>
     </div>
     <div class="navbar-nav" style="margin-left: auto;">
@@ -30,7 +27,7 @@ session_start();
           <?php echo $_SESSION['sess_user']; ?>
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" onclick="userLogout()" href="../client/client-logout.php">Logout</a></li>
+            <li><a class="dropdown-item" onclick="return confirm('Are You sure you want to logout?');" href="../client/client-logout.php">Logout</a></li>
           </ul>
     </li>
     </div>
@@ -43,17 +40,21 @@ session_start();
 .navbar{
         background: #072F4F;
 }
-.navbar-brand{
+.navbar-brand a{
     margin-left: 20px;
+    font-weight: 500 !important;
+    font-family: 'Libre Bodoni', serif; 
+    font-size: 32px !important;
 
 }.navbar a {
   color:white;
   text-decoration: none;
   margin-left: 20px;
   font-size: 28px;
+  
 }
-.navbar-brand .fas,span{
-    color: #B2390E;
+span{
+    color: #B4CE1D;
 }
 .navbar-brand a:hover{
   color: white;
