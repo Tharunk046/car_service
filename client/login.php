@@ -1,3 +1,23 @@
+<?php
+$err = " ";
+if ($_SERVER["REQUEST_METHOD"] == 'POST' && isset($_POST['login'])) {
+    $connection = mysqli_connect('localhost', 'root', '', 'service_appointment') or die("connection failed") . mysqli_connect_error();
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $sql = "SELECT * FROM `users` WHERE `username` = '$username' AND `password` = '$password'";
+    $result = mysqli_query($connection,$sql);
+    $count = mysqli_num_rows($result);
+    if($count > 0)
+    {
+        session_start();  
+        $_SESSION['sess_user']=$username;  
+        header( "location: client-profile.php?profile=$username");
+    }
+    else{
+       $err = "Enter a valid username & passoword ";
+    }
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -16,7 +36,9 @@
     <?php include "../basic/header.php"?>
       <div class="login-form">
       <h2 class="text-center">LOGIN</h2>
-      <form action="login-validate.php" method="POST">
+      <br>
+        <p class="err"><?php echo $err ?></p>
+      <form action=" " method="POST">
           <label for="username" class="form-label">Username:</label>
           <br>
           <input type="text" name="username" id="username" class="form-input" required autofocus>
@@ -28,12 +50,19 @@
       </form>
       <h4 class="text-center">To create a new account <a href="./create.php">Click here</a></h4>
       </div>
+      <br>
       <?php include "../basic/footer.php"?>
   </body>
 
  <style>
    .navbar{
      position: absolute;
+   }
+
+   .err{
+     font-size: 24px;
+     font-weight: 600;
+     color: red;
    }
    .login-form{
      margin-top: 8rem;
