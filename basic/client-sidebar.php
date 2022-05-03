@@ -19,7 +19,7 @@
               <li><a href='../client/client-profile.php?profile=$username'>Profile</a></li>
               <li><a href='../client/client-service.php?profile=$username'>Services</a></li>
               <li><a href='../client/client-booking.php?profile=$username'>Appointment</a></li>
-              <li><a href='#'>Feedback</a></li>
+              <li><a href='../client/client-feedback.php?profile=$username''>Feedback</a></li>
               "
               ?>
           </ul>

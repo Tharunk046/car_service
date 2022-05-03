@@ -1,0 +1,14 @@
+.feedback{
+    width:66rem;
+    margin-left: 10rem;
+}
+form{
+    margin-left: 5rem;
+}
+.form-control ,.form-select{
+    width: 35rem !important;
+}
+.form-label{
+    font-size: 18px !important;
+    text-transform: capitalize;
+}
