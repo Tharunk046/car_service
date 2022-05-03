@@ -7,6 +7,7 @@ $book = mysqli_fetch_assoc($result);
 $booking_id = $book['booking_id'];
 $username = $book['username'];
 $number = $book['number'];
+$email = $book['email'];
 $address = $book['address'];
 $date = $book['date']; 
 $car_manufacturer = $book['car_manufacturer'];                 
@@ -14,6 +15,7 @@ $car_model = $book['car_model'];
 $kilo_met_driven = $book['kilo_met_driven'];
 $services = $book['services'];
 $pickup_drop = $book['pickup_drop'];
+$booking_time = $book['booking_time'];
 $status = $book['status'];
 ?>
 <!doctype html>
@@ -43,6 +45,7 @@ $status = $book['status'];
         <p><span class="book">Booking id</span> <br> <?php echo $booking_id;?></p>
         <p><span class="book">Username</span><br><?php echo $username;?></p>
         <p><span class="book">Number</span><br><?php echo $number;?></p>
+        <p><span class="book">Email</span><br><?php echo $email;?></p>
         <p><span class="book">Address</span><br><?php echo $address; ?></p>
         <p><span class="book">Date</span><br><?php echo $date; ?></p>
       </div>
@@ -52,6 +55,7 @@ $status = $book['status'];
         <p><span class="book">Kilo meters driven</span><br><?php echo $kilo_met_driven; ?></p>
         <p><span class="book">Services</span><br><?php echo $services; ?></p>
         <p><span class="book">pickup and drop</span><br><?php echo $pickup_drop; ?></p>
+        <p><span class="book">Booking time</span><br><?php echo $booking_time;?></p>
         <p><span class="book">Status</span><br><?php echo $status; ?> </p>
       </div>
     </div>

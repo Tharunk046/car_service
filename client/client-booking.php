@@ -6,6 +6,7 @@
       $query = mysqli_query($connection,$sql);
       $profile = mysqli_fetch_assoc($query);
       $number = $profile['number'];
+      $email = $profile['email'];
       $address = $profile['address'];
     }
 ?>
@@ -14,6 +15,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit']))){
     $connection = mysqli_connect('localhost','root','','service_appointment') or die ("failed").mysqli_connect_error();
         $username = $_POST['username'];
         $number = $_POST['number'];
+        $email = $_POST['email'];
         $address = $_POST['address'];
         $date = $_POST['date'];
         $car_manufacturer = $_POST['car_manufacturer'];
@@ -22,7 +24,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit']))){
         $kilo_met_driven = $_POST['kilo_met_driven'];
         $services = implode(',', $_POST['services']);
         $pickup_drop = $_POST['pickup_drop'];
-    $sql = "INSERT INTO `booking`(`username`,`number`,`address`,`date`,`car_manufacturer`, `car_model`, `car_reg_num`, `kilo_met_driven`, `services`, `pickup_drop`) VALUES ('$username','$number','$address','$date','$car_manufacturer','$car_model','$car_reg_num','$kilo_met_driven','$services','$pickup_drop')";
+    $sql = "INSERT INTO `booking`(`username`,`number`,`email`,`address`,`date`,`car_manufacturer`, `car_model`, `car_reg_num`, `kilo_met_driven`, `services`, `pickup_drop`) VALUES ('$username','$number','$email','$address','$date','$car_manufacturer','$car_model','$car_reg_num','$kilo_met_driven','$services','$pickup_drop')";
     $result = mysqli_query($connection,$sql);
     if ($result) {
         header("location: ./redirect.php");
@@ -62,6 +64,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit']))){
           <br>
           <label for="number" class="form-label"> Phone number: </label>
           <input type="text" name="number" id="number" class="form-control" value="<?php echo $number ?>">
+          <br>
+          <label for="email" class="form-label"> Email: </label>
+          <input type="email" name="email" id="email" class="form-control" value="<?php echo $email ?>">
           <br>
           <label for="address" class="form-label">Address:</label>
           <input type="text" name="address" class="form-control" id="address" value="<?php echo $address ?>">
