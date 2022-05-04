@@ -88,10 +88,10 @@
              $price = $row['price'];
              echo"
              <div class='form-check'>
-  <input class='form-check-input' type='checkbox' value='$price' id='$service_id'>
+  <input class='form-check-input' type='checkbox' onclick='priceCheck($service_id,$price)' value='$price' id='$service_id'>
   <label class='form-check-label' for='flexCheckIndeterminate'>
     $service_name <span> $price </span>
-  </label>
+  </label> 
 </div>
              "; 
            }
@@ -100,18 +100,58 @@
         </form>
         </div>
         <div class="col-4">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  expedita temporibus.</p>
+        <p id="total" class="priceInfo"></p>
+   
+   <div class= "buttonDiv">
+   <input type="button" class="button" value="Calculate Total" id="calcButton">
+   </div>
         </div>
     </div> 
       </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
+       <?php
+       echo"
+       <a href='./client-booking.php?profile=$username'>
+       <button class='btn btn-primary'>Book appointment</button>
+       </a>
+       ";
+       ?>
       </div>
     </div>
   </div>
 </div>
+<script>
+           function calcTotal()
+         {
+            var itemTotal = 0;
+            var items = document.getElementsByTagName("input");
+            //js variable items for all HTML elements w the input tag
 
+            for (var i = 0; i < 11; i++)
+            {
+               if (items[i].checked)//if the item is checked
+               {
+                  itemTotal += (items[i].value * 1);//then item total is updated to the previous total + value of checked item. Mutplied by 1 so that JS knows that it is a num
+               }
+
+               document.getElementById("total").innerHTML = "Your total service cost is:  Rs " + itemTotal + ".00";
+               //inner HTML fills in the space between the opening and closing <p> tags with the total
+            }
+         }
+
+         //backwards compatibility for event listener submit button
+         var calcButton = document.getElementById("calcButton"); //sButton HTML element is assign JS value of submitButton
+         if (calcButton.addEventListener) //now you can add event listener
+         {
+            calcButton.addEventListener("click", calcTotal, false); //event is click, action is calctotal, false for bwc
+         }
+         else if (calcButton.attachEvent)
+         {
+            calcButton.attachEvent("onclick", calcTotal);   
+         }
+
+</script>
  </body>
  </html>
