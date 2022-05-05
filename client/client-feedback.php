@@ -15,12 +15,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit']))){
     }
     $sql = "INSERT INTO `feedback` (`username`,`type`,`description`) VALUES ('$username','$type','$description')";
     $result = mysqli_query($connection,$sql);
-    if ($result) {
-        header("location: ./client-profile.php?profile=$username");
+    echo "<script type = \"text/javascript\">
+                    alert(\"Your feedback is successfully submitted\");
+                    window.location = (\"client-feedback.php?profile=$username\")
+                    </script>";
     } else {
         echo "failed";
     }
-}
 ?>
 <!doctype html>
 <html lang="en">
