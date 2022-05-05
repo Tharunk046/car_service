@@ -31,7 +31,7 @@
                     <th>id</th>
                     <th>username</th>
                     <th>type</th>
-                    <th>feedback</th>
+                    <th>Description</th>
                     <th>action</th>
                 </tr>
             </thead>
@@ -45,13 +45,13 @@
                         $id = $row['id'];
                         $username = $row['username'];
                         $type = $row['type'];
-                        $feedback = $row['feedback'];
+                        $description = $row['description'];
                         echo "
                 <tr>
                 <td>$id</td>
                 <td>$username</td>
                 <td>$type</td>
-                <td>$feedback</td>
+                <td>$description</td>
                 <td>
                 <a href ='./crud/feedback_delete.php?deleteid=$id'><button class='btn btn-danger'>delete</button></a>
                 </td>
