@@ -42,19 +42,26 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit']))){
 <body>
     <?php include "../basic/client-header.php" ?>
     <?php include "../basic/client-sidebar.php" ?>
+    <script>
+    document.getElementById("feedback").style.color = "red";
+    document.getElementById("feedback").style.fontWeight="600";
+    </script>
     <div class="feedback">
+    <div class="feedback_heading">
+            <h3>Feedback</h3>
+   </div>
         <form action=" " method="POST">
             <label for="username" class="form-label">Username:</label>
             <input type="text" name="username" id="username" value="<?php echo $username ?>" class="form-control">
             <label for="type" class="form-label">Type:</label>
-            <select class="form-select form-select-lg mb-3" name="type" aria-label=".form-select-lg example">
-                <option disabled>select any option</option>
+            <select class="form-select  mb-3" name="type" aria-label=".form-select-lg example">
+                <option disabled selected>select any option</option>
                 <option value="feedback">Feedback</option>
                 <option value="complaint">Complaint</option>
             </select>
             <label for="description" class="form-label">Description:</label>
             <textarea class="form-control" name="description" id="description" cols="30" rows="10"></textarea>
-            <button type="submit" class="btn btn-success" name="submit" id="submit">Submit</button>
+            <button type="submit" class="btn btn-success my-3" name="submit" id="submit">Submit</button>
         </form>
     </div>
     <!-- Bootstrap JavaScript Libraries -->

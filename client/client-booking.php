@@ -32,9 +32,15 @@
   <body onload="getManufacture()">
   <?php include "../basic/client-header.php" ?>
   <?php include "../basic/client-sidebar.php" ?>
+  <script>
+    document.getElementById("booking").style.color = "red";
+    document.getElementById("booking").style.fontWeight="600";
+    </script>
   <div class="booking">
-      <p class=" heading mx-3 mt-3">Service Apointment booking</p>
-      <form action="redirect.php" method="POST" class="form">
+  <div class="booking_heading ">
+            <h3>Service Apointment booking</h3>
+   </div>
+      <form action="redirect.php" method="POST" class="form mt-3">
           <label for="username" class="form-label"> User name: </label>
           <input type="text" name="username" id="username" class="form-control" value="<?php echo $username ?>">
           <p id="usererror" class="error text-danger"></p>

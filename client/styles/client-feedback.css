@@ -9,6 +9,19 @@ form{
     width: 35rem !important;
 }
 .form-label{
-    font-size: 18px !important;
+    font-size: 20px !important;
     text-transform: capitalize;
+    margin-top: 15px;
+}
+.feed{
+    margin-left: 20px !important;
+}
+.feedback_heading{
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+    width: 66rem !important;
+    border-bottom: 5px solid gray;
+}
+.btn{
+    width: 10rem;
 }

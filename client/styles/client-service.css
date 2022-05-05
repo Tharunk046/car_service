@@ -10,3 +10,9 @@ thead{
 tbody{
     font-size: 18px;
 }
+.service_heading{
+    margin-top: 0.5rem !important;
+    margin-left: 1rem !important;
+    width: 66rem !important;
+    border-bottom: 5px solid gray;
+}

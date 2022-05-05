@@ -16,10 +16,10 @@
       <div class="sidebar">
           <ul>
               <?php echo "
-              <li><a href='../client/client-profile.php?profile=$username'>Profile</a></li>
-              <li><a href='../client/client-service.php?profile=$username'>Services</a></li>
-              <li><a href='../client/client-booking.php?profile=$username'>Appointment</a></li>
-              <li><a href='../client/client-feedback.php?profile=$username''>Feedback</a></li>
+              <li><a href='../client/client-profile.php?profile=$username' id='profile'>Profile</a></li>
+              <li><a href='../client/client-service.php?profile=$username' id='services'>Services</a></li>
+              <li><a href='../client/client-booking.php?profile=$username' id='booking'>Appointment</a></li>
+              <li><a href='../client/client-feedback.php?profile=$username' id='feedback'>Feedback</a></li>
               "
               ?>
           </ul>

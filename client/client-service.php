@@ -27,7 +27,14 @@
  <body class="bg-light">
    <?php include "../basic/client-header.php" ?>
    <?php include "../basic/client-sidebar.php" ?>
+   <script>
+    document.getElementById("services").style.color = "red";
+    document.getElementById("services").style.fontWeight="600";
+    </script>
    <div class="service-list">
+   <div class="service_heading">
+            <h3>Services</h3>
+   </div>
        <button type="button" class="btn btn-primary my-3 p-2 mx-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
        Price calculator
      </button>

@@ -23,3 +23,9 @@
     text-align: center;
     text-decoration: underline;
 }
+.profile_heading{
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    width: 66rem !important;
+    border-bottom: 5px solid gray;
+}
