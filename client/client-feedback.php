@@ -4,6 +4,24 @@ if (isset($_GET['profile'])) {
     $username = $_GET['profile'];
 }
 ?>
+<?php
+if($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit']))){
+    $connection = mysqli_connect('localhost','root','','service_appointment') or die ("failed").mysqli_connect_error();
+    if(isset($_POST['username']))
+    {
+        $username = $_POST['username'];
+        $type = $_POST['type'];
+        $description = $_POST['description'];
+    }
+    $sql = "INSERT INTO `feedback` (`username`,`type`,`description`) VALUES ('$username','$type','$description')";
+    $result = mysqli_query($connection,$sql);
+    if ($result) {
+        header("location: ./client-profile.php?profile=$username");
+    } else {
+        echo "failed";
+    }
+}
+?>
 <!doctype html>
 <html lang="en">
 
@@ -22,17 +40,17 @@ if (isset($_GET['profile'])) {
     <?php include "../basic/client-header.php" ?>
     <?php include "../basic/client-sidebar.php" ?>
     <div class="feedback">
-        <form action=" " method="post">
+        <form action=" " method="POST">
             <label for="username" class="form-label">Username:</label>
             <input type="text" name="username" id="username" value="<?php echo $username ?>" class="form-control">
             <label for="type" class="form-label">Type:</label>
-            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            <select class="form-select form-select-lg mb-3" name="type" aria-label=".form-select-lg example">
                 <option disabled>select any option</option>
                 <option value="feedback">Feedback</option>
                 <option value="complaint">Complaint</option>
             </select>
             <label for="description" class="form-label">Description:</label>
-            <textarea class="form-control" name="decription" id="description" cols="30" rows="10"></textarea>
+            <textarea class="form-control" name="description" id="description" cols="30" rows="10"></textarea>
             <button type="submit" class="btn btn-success" name="submit" id="submit">Submit</button>
         </form>
     </div>
