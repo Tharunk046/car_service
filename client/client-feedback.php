@@ -15,6 +15,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit']))){
     }
     $sql = "INSERT INTO `feedback` (`username`,`type`,`description`) VALUES ('$username','$type','$description')";
     $result = mysqli_query($connection,$sql);
+    if($result == TRUE){
     echo "<script type = \"text/javascript\">
                     alert(\"Your feedback is successfully submitted\");
                     window.location = (\"client-feedback.php?profile=$username\")
@@ -22,6 +23,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit']))){
     } else {
         echo "failed";
     }
+}
 ?>
 <!doctype html>
 <html lang="en">
