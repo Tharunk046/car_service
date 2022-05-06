@@ -42,32 +42,31 @@
    </div>
       <form action="redirect.php" method="POST" class="form mt-3">
           <label for="username" class="form-label"> User name: </label>
-          <input type="text" name="username" id="username" class="form-control" value="<?php echo $username ?>">
-          <p id="usererror" class="error text-danger"></p>
+          <input type="text" name="username" id="username" class="form-control" value="<?php echo $username ?>" required autofocus>
           <br>
           <label for="number" class="form-label"> Phone number: </label>
-          <input type="text" name="number" id="number" class="form-control" value="<?php echo $number ?>">
+          <input type="text" name="number" id="number" class="form-control" value="<?php echo $number ?>" required>
           <br>
           <label for="email" class="form-label"> Email: </label>
-          <input type="email" name="email" id="email" class="form-control" value="<?php echo $email ?>">
+          <input type="email" name="email" id="email" class="form-control" value="<?php echo $email ?>" required>
           <br>
           <label for="address" class="form-label">Address:</label>
-          <input type="text" name="address" class="form-control" id="address" value="<?php echo $address ?>">
+          <input type="text" name="address" class="form-control" id="address" value="<?php echo $address ?>" required>
           <br>
           <label for="date" class="form-label">date:</label>
-          <input type="date" name="date" id="date" class="form-control">
+          <input type="date" name="date" id="date" class="form-control" required>
           <br>
           <label for="car_manufacturer" name="car_manufacturer" class="form-label">car manufacturer:</label>
-          <select name="car_manufacturer" onchange="changeModels(event)" class="form-select" id="man"></select>
+          <select name="car_manufacturer" onchange="changeModels(event)" class="form-select" id="man" required></select>
           <br>
           <label for="car_model" name="car_model" class="form-label">car model:</label>
-          <select name="car_model" id="model" class="form-select"></select>
+          <select name="car_model" id="model" class="form-select" required></select>
         <br>
         <label for="car reg num" class="form-label">Car registration number</label>
-        <input type="text" name="car_reg_num" id="car_reg_num" class="form-control">
+        <input type="text" name="car_reg_num" id="car_reg_num" class="form-control" required>
         <br>
         <label for="kilo meters driven" class="form-label">Kilo meters driven</label>
-        <input type="text" name="kilo_met_driven" id="kilo_met_driven" class="form-control">
+        <input type="text" name="kilo_met_driven" id="kilo_met_driven" class="form-control" required>
         <br>
         <label for="services" class="form-label">Services</label>
         <?php
