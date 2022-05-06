@@ -20,9 +20,13 @@
 <body class="bg-light">
     <?php include "../basic/admin-header.php" ?>
     <?php include "../basic/sidebar.php" ?>
+    <script>
+    document.getElementById("bookings").style.color = "blue";
+    document.getElementById("bookings").style.fontWeight="600";
+    </script>
     <div class="container-fluid">
     <div class="booking_heading">
-            <h4>Booking</h4>
+            <h4>Bookings</h4>
    </div>
         <table class="table table-light table-hover text-center my-4">
             <thead>

@@ -21,9 +21,13 @@
 <body class="bg-light">
     <?php include "../basic/admin-header.php" ?>
     <?php include "../basic/sidebar.php" ?>
+    <script>
+    document.getElementById("feedbacks").style.color = "blue";
+    document.getElementById("feedbacks").style.fontWeight="600";
+    </script>
     <div class="container-fluid">
     <div class="feedback_heading">
-            <h4>Feedback</h4>
+            <h4>Feedbacks</h4>
    </div>
         <table class="table table-light table-hover text-center my-3">
             <thead>

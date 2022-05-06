@@ -47,6 +47,10 @@ if ($result4 = mysqli_query($connection, $sql4)) {
 <body>
   <?php include "../basic/admin-header.php" ?>
   <?php include "../basic/sidebar.php" ?>
+  <script>
+    document.getElementById("dashboard").style.color = "blue";
+    document.getElementById("dashboard").style.fontWeight="600";
+    </script>
   <div class="dashboard">
    <div class="dash_head mt-4">
    <p>Dashboard</p>

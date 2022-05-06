@@ -21,6 +21,10 @@
 <body class="bg-light">
     <?php include "../basic/admin-header.php" ?>
     <?php include "../basic/sidebar.php" ?>
+    <script>
+    document.getElementById("users").style.color = "blue";
+    document.getElementById("users").style.fontWeight="600";
+    </script>
     <div class="container-fluid">
         <div class="user_heading">
             <h4>Users</h4>

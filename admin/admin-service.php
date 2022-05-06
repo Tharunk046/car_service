@@ -19,6 +19,10 @@
  <body class="bg-light">
    <?php include "../basic/admin-header.php" ?>
    <?php include "../basic/sidebar.php" ?>
+   <script>
+    document.getElementById("services").style.color = "blue";
+    document.getElementById("services").style.fontWeight="600";
+    </script>
    <div class="service_heading">
             <h4>Services</h4>
    </div>

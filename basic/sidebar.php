@@ -15,11 +15,11 @@
   <body>
       <div class="sidebar">
           <ul>
-              <li><a href="../admin/admin-panel.php">Dashboard</a></li>
-              <li><a href="../admin/admin-user.php">users</a></li>
-              <li><a href="../admin/admin-service.php">services</a></li>
-              <li><a href="../admin/admin-booking.php">bookings</a></li>
-              <li><a href="../admin/admin-feedback.php">Feedbacks</a></li>
+              <li><a href="../admin/admin-panel.php" id="dashboard">Dashboard</a></li>
+              <li><a href="../admin/admin-user.php" id="users">users</a></li>
+              <li><a href="../admin/admin-service.php" id="services">services</a></li>
+              <li><a href="../admin/admin-booking.php" id="bookings">bookings</a></li>
+              <li><a href="../admin/admin-feedback.php" id="feedbacks">Feedbacks</a></li>
           </ul>
       </div>
       
