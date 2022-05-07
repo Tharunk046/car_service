@@ -29,3 +29,15 @@
     width: 66rem !important;
     border-bottom: 5px solid gray;
 }
+table {
+    margin-left: 11rem;
+    width: 66rem !important;
+    padding: 16px;
+}
+.booking{
+    margin-left: 13rem;
+    text-transform: capitalize;
+    border-bottom: 3px solid gray;
+    width: 15rem;
+    padding: 8px;
+}

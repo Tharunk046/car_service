@@ -50,5 +50,51 @@
      "?>
     </div>
   </div>
+  <table class="table table-light table-hover text-center my-3">
+  <h3 class="booking mt-3">Service Bookings</h3>
+            <thead>
+                <tr class="bg-light">
+                    <th>booking id</th>
+                    <th>username</th>
+                    <th>date</th>
+                    <th>car model</th>
+                    <th>services</th>
+                    <th>status</th>
+                    <th>actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $connection = mysqli_connect('localhost', 'root', '', 'service_appointment') or die("failed") . mysqli_connect_error();
+                $sql = ("SELECT * FROM `booking` WHERE `username` = '$username' ORDER by `booking_id` DESC");
+                $result = mysqli_query($connection, $sql);
+                if ($result) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $booking_id = $row['booking_id'];
+                        $username = $row['username'];
+                        $date = $row['date'];                  
+                        $car_model = $row['car_model'];
+                        $services = $row['services'];
+                        $status = $row['status'];
+                        echo "
+                <tr>
+                <td>$booking_id</td>
+                <td>$username</td>
+                <td>$date</td>
+                <td>$car_model</td>
+                <td>$services</td>
+                <td><span class='badge rounded-pill bg-success mt-2 p-2'>$status</span></td>
+                <td>
+                <a class='dropdown-item' href='./booking_details.php?booking_id=$booking_id&profile=$username'>
+                <button class='btn btn-primary'>View</button>
+                </a>
+                </td>
+                </tr>
+             ";
+                    }
+                }
+                ?>
+            </tbody>
+        </table>
   </body>
 </html>
