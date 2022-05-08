@@ -27,6 +27,13 @@
      function checkBooking(){
     return confirm('please confirm to book the appointment?');
     }
+    function validateDate(e){
+      let date = new Date(e.target.value)
+      let today = new Date()
+      if(today>date){
+        document.getElementById('date').value = today.toDateString()
+      }
+    }
     </script>
   </head>
   <body onload="getManufacture()">
@@ -54,7 +61,7 @@
           <input type="text" name="address" class="form-control" id="address" value="<?php echo $address ?>" required>
           <br>
           <label for="date" class="form-label">date:</label>
-          <input type="date" name="date" id="date" class="form-control" required>
+          <input type="date" name="date" id="date" class="form-control" onchange="validateDate(event)" required>
           <br>
           <label for="car_manufacturer" name="car_manufacturer" class="form-label">car manufacturer:</label>
           <select name="car_manufacturer" onchange="changeModels(event)" class="form-select" id="man" required></select>

@@ -19,7 +19,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit']))){
     if($result == TRUE){
         echo "<script type = \"text/javascript\">
                     alert(\"Your service appointment is successfully submitted\");
-                    window.location = (\"client-booking.php?profile=$username\")
+                    window.location = (\"client-profile.php?profile=$username\")
                     </script>";
     }  else {
         echo "failed";
