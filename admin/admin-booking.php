@@ -43,7 +43,7 @@
             <tbody>
                 <?php
                 $connection = mysqli_connect('localhost', 'root', '', 'service_appointment') or die("failed") . mysqli_connect_error();
-                $sql = ("SELECT * FROM `booking`");
+                $sql = ("SELECT * FROM `booking`  ORDER by `booking_id` DESC");
                 $result = mysqli_query($connection, $sql);
                 if ($result) {
                     while ($row = mysqli_fetch_assoc($result)) {

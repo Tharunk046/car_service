@@ -52,15 +52,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit']))){
    </div>
         <form action=" " method="POST">
             <label for="username" class="form-label">Username:</label>
-            <input type="text" name="username" id="username" value="<?php echo $username ?>" class="form-control">
+            <input type="text" name="username" id="username" value="<?php echo $username ?>" class="form-control" required>
             <label for="type" class="form-label">Type:</label>
-            <select class="form-select  mb-3" name="type" aria-label=".form-select-lg example">
+            <select class="form-select  mb-3" name="type" aria-label=".form-select-lg example" required>
                 <option disabled selected>select any option</option>
                 <option value="feedback">Feedback</option>
                 <option value="complaint">Complaint</option>
             </select>
             <label for="description" class="form-label">Description:</label>
-            <textarea class="form-control" name="description" id="description" cols="30" rows="10"></textarea>
+            <textarea class="form-control" name="description" id="description" cols="30" rows="10" required></textarea>
             <button type="submit" class="btn btn-success my-3" name="submit" id="submit">Submit</button>
         </form>
     </div>
