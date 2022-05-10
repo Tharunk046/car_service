@@ -46,7 +46,8 @@ session_start();
     font-family: 'Libre Bodoni', serif; 
     font-size: 32px !important;
 
-}.navbar a {
+}
+.navbar a {
   color:white;
   text-decoration: none;
   margin-left: 20px;

@@ -86,6 +86,10 @@ $status = $book['status'];
   </a>
     </form>   
     </div>
+    <script>
+    document.getElementById("profile").style.color = "red";
+    document.getElementById("profile").style.fontWeight="600";
+    </script>
   <script>
     function printDiv(booking_details) {
      var printContents = document.getElementById(booking_details).innerHTML;

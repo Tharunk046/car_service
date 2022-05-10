@@ -26,6 +26,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
   </head>
   <body>
+    <script>
+    document.getElementById("profile").style.color = "red";
+    document.getElementById("profile").style.fontWeight="600";
+    </script>
   <?php include "../basic/client-header.php" ?>
   <?php include "../basic/client-sidebar.php" ?>
   <script>

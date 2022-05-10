@@ -61,7 +61,7 @@ if (isset($_POST['submit'])) {
   <div class="sidebar">
           <ul>
             <?php echo "
-              <li><a href='../client-profile.php?profile=$username'>Profile</a></li>
+              <li><a href='../client-profile.php?profile=$username' id='profile'>Profile</a></li>
               <li><a href='../client-service.php?profile=$username'>Services</a></li>
               <li><a href='../client-booking.php?profile=$username'>Appointment</a></li>
               <li><a href='href='../client-feedback.php?profile=$username''>Feedback</a></li>
@@ -91,22 +91,31 @@ if (isset($_POST['submit'])) {
           </a>
           " ?>
       </form>
+      <script>
+    document.getElementById("profile").style.color = "red";
+    document.getElementById("profile").style.fontWeight="600";
+    </script>
   </body>
   <style>
-    .navbar{
+.navbar{
         background: #072F4F;
 }
-.navbar-brand{
+.navbar-brand a{
     margin-left: 20px;
+    font-weight: 500 !important;
+    font-family: 'Libre Bodoni', serif; 
+    font-size: 32px !important;
 
-}.navbar a {
+}
+.navbar a {
   color:white;
   text-decoration: none;
   margin-left: 20px;
   font-size: 28px;
+  
 }
-.navbar-brand .fas,span{
-    color: #B2390E;
+span{
+    color: #B4CE1D;
 }
 .navbar-brand a:hover{
   color: white;
