@@ -54,6 +54,12 @@
      "?>
     </div>
   </div>
+  <?php
+  $sql = "SELECT * FROM `booking` WHERE `username` = '$username'";
+  $query = mysqli_query($connection,$sql);
+  $count = mysqli_num_rows($query); 
+  if($count){
+  ?>
   <table class="table table-light table-hover text-center my-3">
   <h3 class="booking mt-3">Service Bookings</h3>
             <thead>
@@ -100,5 +106,8 @@
                 ?>
             </tbody>
         </table>
+        <?php
+        }
+        ?>
   </body>
 </html>

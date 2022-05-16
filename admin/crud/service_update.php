@@ -44,7 +44,7 @@ function checkUpdate(){
   <body class="bg-light text-dark"> 
   <nav class="navbar  navbar-expand-lg sticky-top container-fluid">
     <div class="navbar-brand">
-      <a href="../admin-panel.php"><i class="fas fa-tools"></i> <span>Auto</span> Logic</a>
+    <a href="../admin-panel.php"><i class="fas fa-tools"></i> Auto<span>logic</span></a>
     </div>
     <div class="navbar-nav" style="margin-left: auto;">
       <a href="../admin-logout.php" style="margin-right:40px;">Logout</a>
@@ -76,20 +76,26 @@ function checkUpdate(){
       </form>
   </body>
   <style>
-      .navbar{
-    background-color: #072F4F !important;
+       .navbar{
+    background-color:  #072F4F !important;
 }
 .navbar a {
   color: white;
   text-decoration: none;
   margin-left: 20px;
   font-size: 24px;
+  
 }
-.navbar-brand .fas,span{
-    color: #B2390E;
+.navbar-brand a{
+  font-family: 'Libre Bodoni', serif; 
+    font-size: 32px !important;
+}
+span{
+    color: #B4CE1D;
 }
 .navbar a:hover{
   color: white;
+
 }
 .sidebar{
           position:fixed;
