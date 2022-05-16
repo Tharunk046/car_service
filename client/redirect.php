@@ -18,8 +18,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit']))){
     $result = mysqli_query($connection,$sql);
     if($result == TRUE){
         echo "<script type = \"text/javascript\">
-                    alert(\"Your service appointment is successfully submitted\");
-                    window.location = (\"client-profile.php?profile=$username\")
+                    alert(\"Your service appointment is successfully submitted,conformation mail has been sent\");
+                    window.location = (\"mail.php?profile=$username\")
                     </script>";
     }  else {
         echo "failed";
