@@ -19,10 +19,10 @@
     <div class="navbar-collapse collapse text-dark" id="nav-toggler">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a href="../landing/landing.php" class="nav-link text-white">Home</a>
+          <a href="/php/project/" class="nav-link text-white">Home</a>
         </li>
         <li class="nav-item">
-          <a href="../client/login.php" class="nav-link ml-1 text-warning">LOGIN</a>
+          <a href="/php/project/client/login.php" class="nav-link ml-1 text-warning">LOGIN</a>
         </li>
       </ul>
     </div>

@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="landing.css">
+  <link rel="stylesheet" href="./landing/landing.css">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -19,9 +19,9 @@
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 </head>
 <body>
- <?php include "../basic/header.php"; ?>
+ <?php include "./basic/header.php"; ?>
   <!---->
-  <video class="w-100" src="../images/autologicvid.mp4" autoplay muted loop></video>
+  <video class="w-100" src="./images/autologicvid.mp4" autoplay muted loop></video>
   <!---->
   <div class="about-us row  mt-3 container-fluid ">
     <div class="col-md-6 about ">
@@ -35,10 +35,10 @@
         and more.
       </p>
     </div>
-    <img src="../images/about.jpeg" class="col-md-6" alt="">
+    <img src="./images/about.jpeg" class="col-md-6" alt="">
   </div>
   <div class="why-us row mt-3 container-fluid">
-    <img class="col-md-6" src="../images/car-service.jpg"></img>
+    <img class="col-md-6" src="./images/car-service.jpg"></img>
     <div class="col-md-6 why ">
       <h2>WHY CHOOSE US?</h2>
       <p>
@@ -55,7 +55,7 @@
   <div class="landing-card d-flex justify-content-evenly container mt-5">
     <div class="card p-3" style="width: 30%; text-transform:capitalize;">
       <div class="row">
-        <div class="col-lg-4 col-md-12"><img src="../images/icon1.jpg" alt="" class="img-fluid mt-4"></div>
+        <div class="col-lg-4 col-md-12"><img src="./images/icon1.jpg" alt="" class="img-fluid mt-4"></div>
         <div class="col-lg-8  col-md-12">
           <h3>Book Appointment</h3>
           <p>Book your service appointmenet through our website.</p>
@@ -64,7 +64,7 @@
     </div>
     <div class="card p-3" style="width: 30%; text-transform:capitalize;">
       <div class="row">
-        <div class="col-lg-4  col-md-12"><img src="../images/icon2.png" alt="" class="img-fluid mt-4"></div>
+        <div class="col-lg-4  col-md-12"><img src="./images/icon2.png" alt="" class="img-fluid mt-4"></div>
         <div class="col-lg-8  col-md-12">
           <h3>Save your <br> Time</h3>
           <p>pickup and drop facility is available and free for our clients.</p>
@@ -73,7 +73,7 @@
     </div>
     <div class="card p-3" style="width: 30%; text-transform:capitalize;">
       <div class="row">
-        <div class="col-lg-4  col-md-12"><img src="../images/icon3.png" alt="" class="img-fluid mt-4"></div>
+        <div class="col-lg-4  col-md-12"><img src="./images/icon3.png" alt="" class="img-fluid mt-4"></div>
         <div class="col-lg-8  col-md-12">
           <h3>Save your Money</h3>
           <p>affordable service cost and exiciting packages available.</p>
@@ -83,9 +83,9 @@
   </div>
   <br>
   <div class="login text-center">
-   <!-- <h2>To Book an appointment please <a href="../basic/login.php">LOGIN</a></h2> -->
+   <!-- <h2>To Book an appointment please <a href="./basic/login.php">LOGIN</a></h2> -->
    <h3>For Appointment Booking,Services Provided and Price Details Please  
-   <a href="../client/login.php" style="text-decoration: none;">LOGIN</a>
+   <a href="./client/login.php" style="text-decoration: none;">LOGIN</a>
    </h3>
   </div>
   <br>
@@ -94,40 +94,40 @@
     <h1> Car Brands We Service </h1>
     <div class="d-flex justify-content-md-around">
       <div class="card">
-        <img src="../images/ford-logo.png" alt="">
+        <img src="./images/ford-logo.png" alt="">
         <h3>ford</h3>
       </div>
       <div class="card">
-        <img src="../images/nissan-logo.png" alt="">
+        <img src="./images/nissan-logo.png" alt="">
         <h3>nissan</h3>
       </div>
       <div class="card">
-        <img src="../images/skoda-logo.png" alt="">
+        <img src="./images/skoda-logo.png" alt="">
         <h3>skoda</h3>
       </div>
       <div class="card">
-        <img src="../images/suzuki-logo.png" alt="">
+        <img src="./images/suzuki-logo.png" alt="">
         <h3>suzuki</h3>
       </div>
       <div class="card">
-        <img src="../images/tata-logo.png" alt="">
+        <img src="./images/tata-logo.png" alt="">
         <h3>tata</h3>
       </div>
       <div class="card">
-        <img src="../images/toyota-logo.png" alt="">
+        <img src="./images/toyota-logo.png" alt="">
         <h3>toyota</h3>
       </div>
       <div class="card">
-        <img src="../images/volkswagen-logo.png" alt="">
+        <img src="./images/volkswagen-logo.png" alt="">
         <h3>volkswagen</h3>
       </div>
       <div class="card">
-        <img src="../images/honda-logo.png" alt="">
+        <img src="./images/honda-logo.png" alt="">
         <h3>honda</h3>
       </div>
     </div>
   </div>
   <br>
 </body>
- <?php include "../basic/footer.php"; ?>
+ <?php include "./basic/footer.php"; ?>
 </html>

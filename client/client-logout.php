@@ -2,6 +2,6 @@
 session_start();
 if(session_destroy())
 {
-header("Location:../landing/landing.php");
+header("Location:/php/project/");
 }
 ?>
