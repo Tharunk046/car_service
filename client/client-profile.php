@@ -40,7 +40,7 @@
   <div class="profile_heading">
             <h3>Profile</h3>
    </div>
-    <div class="user-details ml-3  p-3">
+    <div class="user-details ml-3 mt-2 p-3">
       <?php echo "
       <h2>User Details</h2>
       <p>User id : $id</p>

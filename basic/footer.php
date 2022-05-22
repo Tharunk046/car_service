@@ -21,12 +21,12 @@ integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jI
         <br>
         <a href="#">
         <p>
-          <img src="./images/facebook logo.png" alt=""> - autoLogic
+          <img src="/php/project/images/facebook logo.png" alt=""> - autoLogic
         </p>
         <p>
-        <img src="./images/instagram logo_icon.png" alt=""> - autoLogic </p>
+        <img src="/php/project/images/instagram logo_icon.png" alt=""> - autoLogic </p>
         <p>
-        <img src="./images/whatsapp logo_icon.png" alt=""> - +91 8248348640
+        <img src="/php/project/images/whatsapp logo_icon.png" alt=""> - +91 8248348640
         </p>
         </a>
       </div>

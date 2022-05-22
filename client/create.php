@@ -40,12 +40,12 @@
       </div>
       <div class="input">
         <label for="password" class="form-label">password:</label>
-        <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password" maxlength="8">
+        <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password">
         <p id="passerror"  class="error text-danger"></p>
       </div>
       <div class="input">
         <label for="confirm_password" class="form-label">confirm password:</label>
-        <input type="password" class="form-control" name="confirm_password" id="confirm_password" maxlength="8" placeholder="Re-enter your password">
+        <input type="password" class="form-control" name="confirm_password" id="confirm_password" placeholder="Re-enter your password">
         <p id="repasserror"  class="error text-danger"></p>
       </div>
         <button type="submit" name="submit"class="btn btn-primary" onclick="return val()" id="submit">Submit</button>
