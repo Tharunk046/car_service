@@ -10,6 +10,47 @@
       $address = $profile['address'];
     }
 ?>
+
+<?php
+
+if($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit']))){
+    $connection = mysqli_connect('localhost','root','','service_appointment') or die ("failed").mysqli_connect_error();
+        $username = $_POST['username'];
+        $number = $_POST['number'];
+        $email = $_POST['email'];
+        $address = $_POST['address'];
+        $date = $_POST['date'];
+        $car_manufacturer = $_POST['car_manufacturer'];
+        $car_model = $_POST['car_model'];
+        $car_reg_num = $_POST['car_reg_num'];
+        $kilo_met_driven = $_POST['kilo_met_driven'];
+        $services = implode(',', $_POST['services']);
+        $pickup_drop = $_POST['pickup_drop'];
+
+        $q = "Select * from booking where date='$date'";
+        $res = mysqli_query($connection,$q);
+        $row = mysqli_num_rows($res);
+        $row = (int)$row;
+if($row > 9){
+  echo "<script type = \"text/javascript\">
+                    alert(\"appointments are full, please change the date\");
+                    </script>";
+}
+else{
+    $sql = "INSERT INTO `booking`(`username`,`number`,`email`,`address`,`date`,`car_manufacturer`, `car_model`, `car_reg_num`, `kilo_met_driven`, `services`, `pickup_drop`) VALUES ('$username','$number','$email','$address','$date','$car_manufacturer','$car_model','$car_reg_num','$kilo_met_driven','$services','$pickup_drop')";
+    $result = mysqli_query($connection,$sql);
+    if($result == TRUE){
+        echo "<script type = \"text/javascript\">
+                    alert(\"Your service appointment is successfully submitted,conformation mail has been sent\");
+                    window.location = (\"mail.php?profile=$username\")
+                    </script>";
+    }  else {
+        echo "failed";
+    }
+}
+}
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -47,7 +88,7 @@
   <div class="booking_heading ">
             <h3>Service Apointment booking</h3>
    </div>
-      <form action="redirect.php" method="POST" class="form mt-3">
+      <form action=" " method="POST" class="form mt-3">
           <label for="username" class="form-label"> User name: </label>
           <input type="text" name="username" id="username" class="form-control" value="<?php echo $username ?>" required autofocus>
           <br>
