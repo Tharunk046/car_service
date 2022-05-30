@@ -43,7 +43,6 @@
     <div class="user-details ml-3 mt-2 p-3">
       <?php echo "
       <h2>User Details</h2>
-      <p>User id : $id</p>
       <p>Username : $username</p>
       <p>Phone number : $number</p>
       <p>Email : $email</p>
